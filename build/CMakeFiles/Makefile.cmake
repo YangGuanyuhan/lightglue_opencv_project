@@ -50,7 +50,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/test_debug.dir/DependInfo.cmake"
-  "CMakeFiles/test_superpoint.dir/DependInfo.cmake"
-  "CMakeFiles/test_lightglue.dir/DependInfo.cmake"
+  "CMakeFiles/test_aliked.dir/DependInfo.cmake"
   )

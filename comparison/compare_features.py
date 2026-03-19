@@ -4,14 +4,14 @@ import onnxruntime as ort
 import time
 import statistics
 print(ort.get_available_providers())
-# ------------------- 配置 -------------------
+# ------------------- Configuration -------------------
 IMAGE_PATH_1 = 'image1.jpg'
 IMAGE_PATH_2 = 'image2.jpg'
 SP_MODEL_PATH = 'model/superpoint.onnx'
 LG_MODEL_PATH = 'model/superpoint_lightglue.onnx'
-TARGET_SIZE = (1280, 720)  # 保持输入一致
+TARGET_SIZE = (1280, 720)  # Keep input consistent
 DEVICE = "CUDAExecutionProvider"
-REPEAT = 10  # 连续测试次数
+REPEAT = 10  # Number of consecutive tests
 MAX_KPTS = 2048 
 # --------------------------------------------
 
@@ -19,7 +19,7 @@ sess_options = ort.SessionOptions()
 sess_options.log_severity_level = 3
 
 
-# ============ 工具函数 ============
+# ============ Utility functions ============
 def load_gray_resized(path):
     img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
     if img is None:
@@ -115,58 +115,58 @@ def test_superpoint(img1, img2, sp_sess, lg_sess):
         "num_kpts1": len(kpts1), "num_kpts2": len(kpts2), "num_good": num_good
     }
 
-# ============ 主流程 ============
+# ============ Main flow ============
 if __name__ == "__main__":
     img1_gray = load_gray_resized(IMAGE_PATH_1)
     img2_gray = load_gray_resized(IMAGE_PATH_2)
     img1_color = load_color_resized(IMAGE_PATH_1)
     img2_color = load_color_resized(IMAGE_PATH_2)
 
-    print("加载模型（不计入测试时间）...")
+    print("Loading models not included in test time")
     sp_sess = ort.InferenceSession(SP_MODEL_PATH, sess_options, providers=[DEVICE])
     lg_sess = ort.InferenceSession(LG_MODEL_PATH, sess_options, providers=[DEVICE])
-    print("模型加载完成。\n")
+    print("Model loading complete\n")
 
     # ---------- SIFT ----------
-    print(f"=== 测试 SIFT（重复 {REPEAT} 次）===")
+    print(f"=== Testing SIFT repeat {REPEAT} times ===")
     sift_res = []
     for i in range(REPEAT):
         res = test_sift(img1_gray, img2_gray)
         sift_res.append(res)
-        print(f"  第 {i+1:02d} 次: {res}")
+        print(f"  Iteration {i+1:02d} {res}")
 
     def avg(field): return statistics.mean(r[field] for r in sift_res)
     def std(field): return statistics.stdev(r[field] for r in sift_res)
 
-    print(f"\nSIFT 平均结果：")
-    print(f"  det1_time: {avg('det1_time'):.2f} ± {std('det1_time'):.2f} ms")
-    print(f"  det2_time: {avg('det2_time'):.2f} ± {std('det2_time'):.2f} ms")
-    print(f"  match_time: {avg('match_time'):.2f} ± {std('match_time'):.2f} ms")
-    print(f"  总时间: {(avg('det1_time')+avg('det2_time')+avg('match_time')):.2f} ms")
-    print(f"  平均关键点数: {avg('num_kpts1'):.1f} / {avg('num_kpts2'):.1f}")
-    print(f"  平均有效匹配数: {avg('num_good'):.1f}")
+    print(f"\nSIFT average results")
+    print(f"  det1_time {avg('det1_time'):.2f} ± {std('det1_time'):.2f} ms")
+    print(f"  det2_time {avg('det2_time'):.2f} ± {std('det2_time'):.2f} ms")
+    print(f"  match_time {avg('match_time'):.2f} ± {std('match_time'):.2f} ms")
+    print(f"  Total time {(avg('det1_time')+avg('det2_time')+avg('match_time')):.2f} ms")
+    print(f"  Average keypoints {avg('num_kpts1'):.1f} / {avg('num_kpts2'):.1f}")
+    print(f"  Average valid matches {avg('num_good'):.1f}")
 
     # ---------- SuperPoint ----------
-    print(f"\n=== 测试 SuperPoint + LightGlue（重复 {REPEAT} 次）===")
+    print(f"\n=== Testing SuperPoint + LightGlue repeat {REPEAT} times ===")
     sp_res = []
     for i in range(REPEAT):
         res = test_superpoint(img1_color, img2_color, sp_sess, lg_sess)
         sp_res.append(res)
-        print(f"  第 {i+1:02d} 次: {res}")
+        print(f"  Iteration {i+1:02d} {res}")
 
     def avg_sp(field): return statistics.mean(r[field] for r in sp_res)
     def std_sp(field): return statistics.stdev(r[field] for r in sp_res)
 
-    print(f"\nSuperPoint 平均结果：")
-    print(f"  det1_time: {avg_sp('det1_time'):.2f} ± {std_sp('det1_time'):.2f} ms")
-    print(f"  det2_time: {avg_sp('det2_time'):.2f} ± {std_sp('det2_time'):.2f} ms")
-    print(f"  match_time: {avg_sp('match_time'):.2f} ± {std_sp('match_time'):.2f} ms")
-    print(f"  总时间: {(avg_sp('det1_time')+avg_sp('det2_time')+avg_sp('match_time')):.2f} ms")
-    print(f"  平均关键点数: {avg_sp('num_kpts1'):.1f} / {avg_sp('num_kpts2'):.1f}")
-    print(f"  平均有效匹配数: {avg_sp('num_good'):.1f}")
+    print(f"\nSuperPoint average results")
+    print(f"  det1_time {avg_sp('det1_time'):.2f} ± {std_sp('det1_time'):.2f} ms")
+    print(f"  det2_time {avg_sp('det2_time'):.2f} ± {std_sp('det2_time'):.2f} ms")
+    print(f"  match_time {avg_sp('match_time'):.2f} ± {std_sp('match_time'):.2f} ms")
+    print(f"  Total time {(avg_sp('det1_time')+avg_sp('det2_time')+avg_sp('match_time')):.2f} ms")
+    print(f"  Average keypoints {avg_sp('num_kpts1'):.1f} / {avg_sp('num_kpts2'):.1f}")
+    print(f"  Average valid matches {avg_sp('num_good'):.1f}")
 
-    # ---------- 汇总 ----------
-    print("\n=== 对比汇总 ===")
-    print(f"SIFT 平均总时间: {(avg('det1_time')+avg('det2_time')+avg('match_time')):.2f} ms")
-    print(f"SuperPoint 平均总时间: {(avg_sp('det1_time')+avg_sp('det2_time')+avg_sp('match_time')):.2f} ms")
-    print(f"SIFT 平均匹配数: {avg('num_good'):.1f} vs SuperPoint: {avg_sp('num_good'):.1f}")
+    # ---------- Summary ----------
+    print("\n=== Comparison summary ===")
+    print(f"SIFT average total time {(avg('det1_time')+avg('det2_time')+avg('match_time')):.2f} ms")
+    print(f"SuperPoint average total time {(avg_sp('det1_time')+avg_sp('det2_time')+avg_sp('match_time')):.2f} ms")
+    print(f"SIFT average matches {avg('num_good'):.1f} vs SuperPoint {avg_sp('num_good'):.1f}")

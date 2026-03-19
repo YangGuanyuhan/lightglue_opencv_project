@@ -3,15 +3,15 @@
 #include <iostream>
 #include <filesystem>
 
-// 打印多维 Mat 的 shape
+// Print multi-dimensional Mat shape
 void printShape(const cv::Mat &mat)
 {
-    std::cout << "  Output shape: [";
+    std::cout << "  Output shape [";
     for (int i = 0; i < mat.dims; i++)
     {
         std::cout << mat.size[i];
         if (i + 1 < mat.dims)
-            std::cout << ", ";
+            std::cout << " ";
     }
     std::cout << "]\n";
 }

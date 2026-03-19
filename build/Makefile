@@ -117,115 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_debug
+# Target rules for targets named test_aliked
 
 # Build rule for target.
-test_debug: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_debug
-.PHONY : test_debug
+test_aliked: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_aliked
+.PHONY : test_aliked
 
 # fast build rule for target.
-test_debug/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_debug.dir/build.make CMakeFiles/test_debug.dir/build
-.PHONY : test_debug/fast
+test_aliked/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/build
+.PHONY : test_aliked/fast
 
-#=============================================================================
-# Target rules for targets named test_superpoint
-
-# Build rule for target.
-test_superpoint: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_superpoint
-.PHONY : test_superpoint
-
-# fast build rule for target.
-test_superpoint/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_superpoint.dir/build.make CMakeFiles/test_superpoint.dir/build
-.PHONY : test_superpoint/fast
-
-#=============================================================================
-# Target rules for targets named test_lightglue
-
-# Build rule for target.
-test_lightglue: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_lightglue
-.PHONY : test_lightglue
-
-# fast build rule for target.
-test_lightglue/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lightglue.dir/build.make CMakeFiles/test_lightglue.dir/build
-.PHONY : test_lightglue/fast
-
-debuglayers.o: debuglayers.cpp.o
-.PHONY : debuglayers.o
+test_aliked.o: test_aliked.cpp.o
+.PHONY : test_aliked.o
 
 # target to build an object file
-debuglayers.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_debug.dir/build.make CMakeFiles/test_debug.dir/debuglayers.cpp.o
-.PHONY : debuglayers.cpp.o
+test_aliked.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/test_aliked.cpp.o
+.PHONY : test_aliked.cpp.o
 
-debuglayers.i: debuglayers.cpp.i
-.PHONY : debuglayers.i
-
-# target to preprocess a source file
-debuglayers.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_debug.dir/build.make CMakeFiles/test_debug.dir/debuglayers.cpp.i
-.PHONY : debuglayers.cpp.i
-
-debuglayers.s: debuglayers.cpp.s
-.PHONY : debuglayers.s
-
-# target to generate assembly for a file
-debuglayers.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_debug.dir/build.make CMakeFiles/test_debug.dir/debuglayers.cpp.s
-.PHONY : debuglayers.cpp.s
-
-superpoint_test.o: superpoint_test.cpp.o
-.PHONY : superpoint_test.o
-
-# target to build an object file
-superpoint_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_superpoint.dir/build.make CMakeFiles/test_superpoint.dir/superpoint_test.cpp.o
-.PHONY : superpoint_test.cpp.o
-
-superpoint_test.i: superpoint_test.cpp.i
-.PHONY : superpoint_test.i
+test_aliked.i: test_aliked.cpp.i
+.PHONY : test_aliked.i
 
 # target to preprocess a source file
-superpoint_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_superpoint.dir/build.make CMakeFiles/test_superpoint.dir/superpoint_test.cpp.i
-.PHONY : superpoint_test.cpp.i
+test_aliked.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/test_aliked.cpp.i
+.PHONY : test_aliked.cpp.i
 
-superpoint_test.s: superpoint_test.cpp.s
-.PHONY : superpoint_test.s
-
-# target to generate assembly for a file
-superpoint_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_superpoint.dir/build.make CMakeFiles/test_superpoint.dir/superpoint_test.cpp.s
-.PHONY : superpoint_test.cpp.s
-
-test_lightglue.o: test_lightglue.cpp.o
-.PHONY : test_lightglue.o
-
-# target to build an object file
-test_lightglue.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lightglue.dir/build.make CMakeFiles/test_lightglue.dir/test_lightglue.cpp.o
-.PHONY : test_lightglue.cpp.o
-
-test_lightglue.i: test_lightglue.cpp.i
-.PHONY : test_lightglue.i
-
-# target to preprocess a source file
-test_lightglue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lightglue.dir/build.make CMakeFiles/test_lightglue.dir/test_lightglue.cpp.i
-.PHONY : test_lightglue.cpp.i
-
-test_lightglue.s: test_lightglue.cpp.s
-.PHONY : test_lightglue.s
+test_aliked.s: test_aliked.cpp.s
+.PHONY : test_aliked.s
 
 # target to generate assembly for a file
-test_lightglue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lightglue.dir/build.make CMakeFiles/test_lightglue.dir/test_lightglue.cpp.s
-.PHONY : test_lightglue.cpp.s
+test_aliked.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/test_aliked.cpp.s
+.PHONY : test_aliked.cpp.s
 
 # Help Target
 help:
@@ -235,18 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test_debug"
-	@echo "... test_lightglue"
-	@echo "... test_superpoint"
-	@echo "... debuglayers.o"
-	@echo "... debuglayers.i"
-	@echo "... debuglayers.s"
-	@echo "... superpoint_test.o"
-	@echo "... superpoint_test.i"
-	@echo "... superpoint_test.s"
-	@echo "... test_lightglue.o"
-	@echo "... test_lightglue.i"
-	@echo "... test_lightglue.s"
+	@echo "... test_aliked"
+	@echo "... test_aliked.o"
+	@echo "... test_aliked.i"
+	@echo "... test_aliked.s"
 .PHONY : help
 
 
