@@ -22,7 +22,7 @@ def test_superpoint_cv2(model_path, image_path, target_size=(640, 480)):
 
     # 1 Load model
     print(f"Loading SuperPoint model OpenCV DNN {model_path}")
-    net = cv2.dnn.readNetFromONNX(model_path,ENGINE_ORT)
+    net = cv2.dnn.readNetFromONNX(model_path)
 
     # 2 Read and preprocess image
     img_bgr = cv2.imread(image_path)
