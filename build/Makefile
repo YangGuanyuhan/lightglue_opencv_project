@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_aliked
+# Target rules for targets named feature_extractor_matcher_demo
 
 # Build rule for target.
-test_aliked: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_aliked
-.PHONY : test_aliked
+feature_extractor_matcher_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 feature_extractor_matcher_demo
+.PHONY : feature_extractor_matcher_demo
 
 # fast build rule for target.
-test_aliked/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/build
-.PHONY : test_aliked/fast
+feature_extractor_matcher_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/feature_extractor_matcher_demo.dir/build.make CMakeFiles/feature_extractor_matcher_demo.dir/build
+.PHONY : feature_extractor_matcher_demo/fast
 
-test_aliked.o: test_aliked.cpp.o
-.PHONY : test_aliked.o
+example_for_featur_extractor_matcher.o: example_for_featur_extractor_matcher.cpp.o
+.PHONY : example_for_featur_extractor_matcher.o
 
 # target to build an object file
-test_aliked.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/test_aliked.cpp.o
-.PHONY : test_aliked.cpp.o
+example_for_featur_extractor_matcher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/feature_extractor_matcher_demo.dir/build.make CMakeFiles/feature_extractor_matcher_demo.dir/example_for_featur_extractor_matcher.cpp.o
+.PHONY : example_for_featur_extractor_matcher.cpp.o
 
-test_aliked.i: test_aliked.cpp.i
-.PHONY : test_aliked.i
+example_for_featur_extractor_matcher.i: example_for_featur_extractor_matcher.cpp.i
+.PHONY : example_for_featur_extractor_matcher.i
 
 # target to preprocess a source file
-test_aliked.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/test_aliked.cpp.i
-.PHONY : test_aliked.cpp.i
+example_for_featur_extractor_matcher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/feature_extractor_matcher_demo.dir/build.make CMakeFiles/feature_extractor_matcher_demo.dir/example_for_featur_extractor_matcher.cpp.i
+.PHONY : example_for_featur_extractor_matcher.cpp.i
 
-test_aliked.s: test_aliked.cpp.s
-.PHONY : test_aliked.s
+example_for_featur_extractor_matcher.s: example_for_featur_extractor_matcher.cpp.s
+.PHONY : example_for_featur_extractor_matcher.s
 
 # target to generate assembly for a file
-test_aliked.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/test_aliked.cpp.s
-.PHONY : test_aliked.cpp.s
+example_for_featur_extractor_matcher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/feature_extractor_matcher_demo.dir/build.make CMakeFiles/feature_extractor_matcher_demo.dir/example_for_featur_extractor_matcher.cpp.s
+.PHONY : example_for_featur_extractor_matcher.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test_aliked"
-	@echo "... test_aliked.o"
-	@echo "... test_aliked.i"
-	@echo "... test_aliked.s"
+	@echo "... feature_extractor_matcher_demo"
+	@echo "... example_for_featur_extractor_matcher.o"
+	@echo "... example_for_featur_extractor_matcher.i"
+	@echo "... example_for_featur_extractor_matcher.s"
 .PHONY : help
 
 

@@ -7,7 +7,7 @@ print(f"Using OpenCV version {cv2.__version__}")
 
 # --- 1 Configuration paths ---
 # Ensure this is the SuperPoint model path you want to test
-SP_MODEL_PATH = 'model/superpoint_simplified.onnx' 
+SP_MODEL_PATH = 'model/superpoint_fixed_480x640.onnx' 
 TEST_IMAGE_PATH = 'images/image1.jpg'
 
 # --- 2 Core extraction and drawing function ---
