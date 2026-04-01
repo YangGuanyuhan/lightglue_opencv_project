@@ -117,24 +117,89 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named feature_extractor_matcher_demo
+# Target rules for targets named example_for_featur_extractor_matcher
 
 # Build rule for target.
-feature_extractor_matcher_demo: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 feature_extractor_matcher_demo
-.PHONY : feature_extractor_matcher_demo
+example_for_featur_extractor_matcher: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_for_featur_extractor_matcher
+.PHONY : example_for_featur_extractor_matcher
 
 # fast build rule for target.
-feature_extractor_matcher_demo/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/feature_extractor_matcher_demo.dir/build.make CMakeFiles/feature_extractor_matcher_demo.dir/build
-.PHONY : feature_extractor_matcher_demo/fast
+example_for_featur_extractor_matcher/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_for_featur_extractor_matcher.dir/build.make CMakeFiles/example_for_featur_extractor_matcher.dir/build
+.PHONY : example_for_featur_extractor_matcher/fast
+
+#=============================================================================
+# Target rules for targets named feature_extraction_example
+
+# Build rule for target.
+feature_extraction_example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 feature_extraction_example
+.PHONY : feature_extraction_example
+
+# fast build rule for target.
+feature_extraction_example/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/feature_extraction_example.dir/build.make CMakeFiles/feature_extraction_example.dir/build
+.PHONY : feature_extraction_example/fast
+
+#=============================================================================
+# Target rules for targets named superpoint_lightglue_only_demo
+
+# Build rule for target.
+superpoint_lightglue_only_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 superpoint_lightglue_only_demo
+.PHONY : superpoint_lightglue_only_demo
+
+# fast build rule for target.
+superpoint_lightglue_only_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/superpoint_lightglue_only_demo.dir/build.make CMakeFiles/superpoint_lightglue_only_demo.dir/build
+.PHONY : superpoint_lightglue_only_demo/fast
+
+#=============================================================================
+# Target rules for targets named test_aliked
+
+# Build rule for target.
+test_aliked: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_aliked
+.PHONY : test_aliked
+
+# fast build rule for target.
+test_aliked/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/build
+.PHONY : test_aliked/fast
+
+#=============================================================================
+# Target rules for targets named test_lightglue
+
+# Build rule for target.
+test_lightglue: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_lightglue
+.PHONY : test_lightglue
+
+# fast build rule for target.
+test_lightglue/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lightglue.dir/build.make CMakeFiles/test_lightglue.dir/build
+.PHONY : test_lightglue/fast
+
+#=============================================================================
+# Target rules for targets named test_xfeat
+
+# Build rule for target.
+test_xfeat: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_xfeat
+.PHONY : test_xfeat
+
+# fast build rule for target.
+test_xfeat/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_xfeat.dir/build.make CMakeFiles/test_xfeat.dir/build
+.PHONY : test_xfeat/fast
 
 example_for_featur_extractor_matcher.o: example_for_featur_extractor_matcher.cpp.o
 .PHONY : example_for_featur_extractor_matcher.o
 
 # target to build an object file
 example_for_featur_extractor_matcher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/feature_extractor_matcher_demo.dir/build.make CMakeFiles/feature_extractor_matcher_demo.dir/example_for_featur_extractor_matcher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_for_featur_extractor_matcher.dir/build.make CMakeFiles/example_for_featur_extractor_matcher.dir/example_for_featur_extractor_matcher.cpp.o
 .PHONY : example_for_featur_extractor_matcher.cpp.o
 
 example_for_featur_extractor_matcher.i: example_for_featur_extractor_matcher.cpp.i
@@ -142,7 +207,7 @@ example_for_featur_extractor_matcher.i: example_for_featur_extractor_matcher.cpp
 
 # target to preprocess a source file
 example_for_featur_extractor_matcher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/feature_extractor_matcher_demo.dir/build.make CMakeFiles/feature_extractor_matcher_demo.dir/example_for_featur_extractor_matcher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_for_featur_extractor_matcher.dir/build.make CMakeFiles/example_for_featur_extractor_matcher.dir/example_for_featur_extractor_matcher.cpp.i
 .PHONY : example_for_featur_extractor_matcher.cpp.i
 
 example_for_featur_extractor_matcher.s: example_for_featur_extractor_matcher.cpp.s
@@ -150,8 +215,128 @@ example_for_featur_extractor_matcher.s: example_for_featur_extractor_matcher.cpp
 
 # target to generate assembly for a file
 example_for_featur_extractor_matcher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/feature_extractor_matcher_demo.dir/build.make CMakeFiles/feature_extractor_matcher_demo.dir/example_for_featur_extractor_matcher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_for_featur_extractor_matcher.dir/build.make CMakeFiles/example_for_featur_extractor_matcher.dir/example_for_featur_extractor_matcher.cpp.s
 .PHONY : example_for_featur_extractor_matcher.cpp.s
+
+feature_extraction_example.o: feature_extraction_example.cpp.o
+.PHONY : feature_extraction_example.o
+
+# target to build an object file
+feature_extraction_example.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/feature_extraction_example.dir/build.make CMakeFiles/feature_extraction_example.dir/feature_extraction_example.cpp.o
+.PHONY : feature_extraction_example.cpp.o
+
+feature_extraction_example.i: feature_extraction_example.cpp.i
+.PHONY : feature_extraction_example.i
+
+# target to preprocess a source file
+feature_extraction_example.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/feature_extraction_example.dir/build.make CMakeFiles/feature_extraction_example.dir/feature_extraction_example.cpp.i
+.PHONY : feature_extraction_example.cpp.i
+
+feature_extraction_example.s: feature_extraction_example.cpp.s
+.PHONY : feature_extraction_example.s
+
+# target to generate assembly for a file
+feature_extraction_example.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/feature_extraction_example.dir/build.make CMakeFiles/feature_extraction_example.dir/feature_extraction_example.cpp.s
+.PHONY : feature_extraction_example.cpp.s
+
+superpoint_lightglue_only_demo.o: superpoint_lightglue_only_demo.cpp.o
+.PHONY : superpoint_lightglue_only_demo.o
+
+# target to build an object file
+superpoint_lightglue_only_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/superpoint_lightglue_only_demo.dir/build.make CMakeFiles/superpoint_lightglue_only_demo.dir/superpoint_lightglue_only_demo.cpp.o
+.PHONY : superpoint_lightglue_only_demo.cpp.o
+
+superpoint_lightglue_only_demo.i: superpoint_lightglue_only_demo.cpp.i
+.PHONY : superpoint_lightglue_only_demo.i
+
+# target to preprocess a source file
+superpoint_lightglue_only_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/superpoint_lightglue_only_demo.dir/build.make CMakeFiles/superpoint_lightglue_only_demo.dir/superpoint_lightglue_only_demo.cpp.i
+.PHONY : superpoint_lightglue_only_demo.cpp.i
+
+superpoint_lightglue_only_demo.s: superpoint_lightglue_only_demo.cpp.s
+.PHONY : superpoint_lightglue_only_demo.s
+
+# target to generate assembly for a file
+superpoint_lightglue_only_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/superpoint_lightglue_only_demo.dir/build.make CMakeFiles/superpoint_lightglue_only_demo.dir/superpoint_lightglue_only_demo.cpp.s
+.PHONY : superpoint_lightglue_only_demo.cpp.s
+
+test_aliked.o: test_aliked.cpp.o
+.PHONY : test_aliked.o
+
+# target to build an object file
+test_aliked.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/test_aliked.cpp.o
+.PHONY : test_aliked.cpp.o
+
+test_aliked.i: test_aliked.cpp.i
+.PHONY : test_aliked.i
+
+# target to preprocess a source file
+test_aliked.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/test_aliked.cpp.i
+.PHONY : test_aliked.cpp.i
+
+test_aliked.s: test_aliked.cpp.s
+.PHONY : test_aliked.s
+
+# target to generate assembly for a file
+test_aliked.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/test_aliked.cpp.s
+.PHONY : test_aliked.cpp.s
+
+test_lightglue.o: test_lightglue.cpp.o
+.PHONY : test_lightglue.o
+
+# target to build an object file
+test_lightglue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lightglue.dir/build.make CMakeFiles/test_lightglue.dir/test_lightglue.cpp.o
+.PHONY : test_lightglue.cpp.o
+
+test_lightglue.i: test_lightglue.cpp.i
+.PHONY : test_lightglue.i
+
+# target to preprocess a source file
+test_lightglue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lightglue.dir/build.make CMakeFiles/test_lightglue.dir/test_lightglue.cpp.i
+.PHONY : test_lightglue.cpp.i
+
+test_lightglue.s: test_lightglue.cpp.s
+.PHONY : test_lightglue.s
+
+# target to generate assembly for a file
+test_lightglue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lightglue.dir/build.make CMakeFiles/test_lightglue.dir/test_lightglue.cpp.s
+.PHONY : test_lightglue.cpp.s
+
+test_xfeat.o: test_xfeat.cpp.o
+.PHONY : test_xfeat.o
+
+# target to build an object file
+test_xfeat.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_xfeat.dir/build.make CMakeFiles/test_xfeat.dir/test_xfeat.cpp.o
+.PHONY : test_xfeat.cpp.o
+
+test_xfeat.i: test_xfeat.cpp.i
+.PHONY : test_xfeat.i
+
+# target to preprocess a source file
+test_xfeat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_xfeat.dir/build.make CMakeFiles/test_xfeat.dir/test_xfeat.cpp.i
+.PHONY : test_xfeat.cpp.i
+
+test_xfeat.s: test_xfeat.cpp.s
+.PHONY : test_xfeat.s
+
+# target to generate assembly for a file
+test_xfeat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_xfeat.dir/build.make CMakeFiles/test_xfeat.dir/test_xfeat.cpp.s
+.PHONY : test_xfeat.cpp.s
 
 # Help Target
 help:
@@ -161,10 +346,30 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... feature_extractor_matcher_demo"
+	@echo "... example_for_featur_extractor_matcher"
+	@echo "... feature_extraction_example"
+	@echo "... superpoint_lightglue_only_demo"
+	@echo "... test_aliked"
+	@echo "... test_lightglue"
+	@echo "... test_xfeat"
 	@echo "... example_for_featur_extractor_matcher.o"
 	@echo "... example_for_featur_extractor_matcher.i"
 	@echo "... example_for_featur_extractor_matcher.s"
+	@echo "... feature_extraction_example.o"
+	@echo "... feature_extraction_example.i"
+	@echo "... feature_extraction_example.s"
+	@echo "... superpoint_lightglue_only_demo.o"
+	@echo "... superpoint_lightglue_only_demo.i"
+	@echo "... superpoint_lightglue_only_demo.s"
+	@echo "... test_aliked.o"
+	@echo "... test_aliked.i"
+	@echo "... test_aliked.s"
+	@echo "... test_lightglue.o"
+	@echo "... test_lightglue.i"
+	@echo "... test_lightglue.s"
+	@echo "... test_xfeat.o"
+	@echo "... test_xfeat.i"
+	@echo "... test_xfeat.s"
 .PHONY : help
 
 

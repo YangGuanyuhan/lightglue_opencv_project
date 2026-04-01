@@ -3,8 +3,8 @@ project(onnx_debugger)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 set(OpenCV_DIR "/usr/local/lib/cmake/opencv4")
-# Find OpenCV
 find_package(OpenCV REQUIRED)
 
 message(STATUS "OpenCV version ${OpenCV_VERSION}")
@@ -12,18 +12,16 @@ message(STATUS "OpenCV include path ${OpenCV_INCLUDE_DIRS}")
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-# 新增：特征提取与匹配示例
-add_executable(feature_extractor_matcher_demo example_for_featur_extractor_matcher.cpp)
-target_link_libraries(feature_extractor_matcher_demo PRIVATE ${OpenCV_LIBS})
+# 🔥 自动查找所有 cpp 文件
+file(GLOB CPP_FILES *.cpp)
 
-# add_executable(test_debug debuglayers.cpp)
-# add_executable(test_superpoint superpoint_test.cpp)
-# add_executable(test_lightglue test_lightglue.cpp)
-# add_executable(test_aliked test_aliked.cpp)
-# add_executable(test_xfeat test_xfeat.cpp)
+# 🔥 遍历每个 cpp，生成一个可执行文件
+foreach(cpp_file ${CPP_FILES})
+    # 提取文件名（不带扩展名）
+    get_filename_component(target_name ${cpp_file} NAME_WE)
 
-# target_link_libraries(test_debug PRIVATE ${OpenCV_LIBS})
-# target_link_libraries(test_superpoint PRIVATE ${OpenCV_LIBS})
-# target_link_libraries(test_lightglue PRIVATE ${OpenCV_LIBS})
-# target_link_libraries(test_aliked PRIVATE ${OpenCV_LIBS})
-# target_link_libraries(test_xfeat PRIVATE ${OpenCV_LIBS})
+    add_executable(${target_name} ${cpp_file})
+    target_link_libraries(${target_name} PRIVATE ${OpenCV_LIBS})
+
+    message(STATUS "Add executable: ${target_name}")
+endforeach()
