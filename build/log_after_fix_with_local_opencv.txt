@@ -1,0 +1,22 @@
+OpenCV version 5.0.0-pre
+Loading LightGlue model ../model/superpoint_lightglue.onnx
+Model loaded successfully
+Dummy data generation complete
+Running LightGlue inference
+[0;93m2026-04-14 21:09:51.316841026 [W:onnxruntime:OpenCV_DNN_ORT, device_discovery.cc:211 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:91 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+Inference complete
+Output matches0 shape 500
+Output mscores0 shape 500
+Found 78 valid matches
+
+--- First 10 match results ---
+i=0 -> match=0, score=0.115355
+i=1 -> match=0, score=0.0324909
+i=2 -> match=-nan, score=0.00324243
+i=3 -> match=-nan, score=0.303503
+i=4 -> match=-nan, score=0.00459663
+i=5 -> match=-nan, score=0.00190767
+i=6 -> match=4.2039e-45, score=0.00289949
+i=7 -> match=0, score=0.0331645
+i=8 -> match=-nan, score=0.0172287
+i=9 -> match=-nan, score=0.000395833

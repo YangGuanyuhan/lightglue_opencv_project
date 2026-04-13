@@ -235,6 +235,7 @@ void drawAndSaveCorners(const Mat& image,
 
 int main() {
 	cout << "===== OpenCV 特征提取与匹配示范开始 =====" << endl;
+	cout << CV_VERSION << endl;
 
 	// 0) 输入图像
 	// 建议准备两张有重叠区域的图：test1.jpg 和 test2.jpg

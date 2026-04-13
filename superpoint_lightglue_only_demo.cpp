@@ -21,7 +21,7 @@ int main()
     
     const string imgPath0 = "../images/image1.jpg";
     const string imgPath1 = "../images/image2.jpg";
-    const string superpointModel = "../model/superpoint_simplified.onnx";
+    const string superpointModel = "../model/superpoint.onnx";
     const string lightglueModel = "../model/superpoint_lightglue.onnx";
     const string outPath = "./sp_lg_matches.jpg";
 
@@ -38,9 +38,9 @@ int main()
         // 1) SuperPoint
         cv::features::SuperPoint::Params spParams;
         spParams.modelPath = superpointModel;
-        spParams.engine = dnn::ENGINE_ORT;
+        spParams.dnnEngine = dnn::ENGINE_ORT;
         spParams.inputSize = Size(640, 480);
-        spParams.swapRB = true;
+        spParams.preferGrayInput = true;
 
         Ptr<cv::features::FeatureExtractor> extractor = cv::features::SuperPoint::create(spParams);
 
@@ -80,7 +80,7 @@ int main()
 
         cv::features::LightGlue::Params lgParams;
         lgParams.modelPath = lightglueModel;
-        lgParams.engine = dnn::ENGINE_ORT;
+        lgParams.dnnEngine = dnn::ENGINE_ORT;
         lgParams.disableWinograd = true;
 
         Ptr<cv::features::FeatureMatcher> matcher = cv::features::LightGlue::create(lgParams);

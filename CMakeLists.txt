@@ -4,20 +4,25 @@ project(onnx_debugger)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(OpenCV_DIR "/usr/local/lib/cmake/opencv4")
+# Allow command-line override: cmake -DOpenCV_DIR=/path/to/opencv/build
+if(NOT DEFINED OpenCV_DIR)
+    set(OpenCV_DIR "/home/christylinux/opencv_build/opencv/build")
+endif()
 find_package(OpenCV REQUIRED)
 
 message(STATUS "OpenCV version ${OpenCV_VERSION}")
+message(STATUS "OpenCV_DIR ${OpenCV_DIR}")
 message(STATUS "OpenCV include path ${OpenCV_INCLUDE_DIRS}")
+message(STATUS "OpenCV libs ${OpenCV_LIBS}")
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-# 🔥 自动查找所有 cpp 文件
+# Auto-discover all cpp files
 file(GLOB CPP_FILES *.cpp)
 
-# 🔥 遍历每个 cpp，生成一个可执行文件
+# Build one executable per cpp file
 foreach(cpp_file ${CPP_FILES})
-    # 提取文件名（不带扩展名）
+    # Extract filename without extension
     get_filename_component(target_name ${cpp_file} NAME_WE)
 
     add_executable(${target_name} ${cpp_file})

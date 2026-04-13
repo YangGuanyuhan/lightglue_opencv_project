@@ -102,8 +102,8 @@ superpoint_lightglue_only_demo: /usr/local/lib/libopencv_video.so.5.0.0
 superpoint_lightglue_only_demo: /usr/local/lib/libopencv_videoio.so.5.0.0
 superpoint_lightglue_only_demo: /usr/local/lib/libopencv_imgcodecs.so.5.0.0
 superpoint_lightglue_only_demo: /usr/local/lib/libopencv_3d.so.5.0.0
-superpoint_lightglue_only_demo: /usr/local/lib/libopencv_features.so.5.0.0
 superpoint_lightglue_only_demo: /usr/local/lib/libopencv_dnn.so.5.0.0
+superpoint_lightglue_only_demo: /usr/local/lib/libopencv_features.so.5.0.0
 superpoint_lightglue_only_demo: /usr/local/lib/libopencv_flann.so.5.0.0
 superpoint_lightglue_only_demo: /usr/local/lib/libopencv_imgproc.so.5.0.0
 superpoint_lightglue_only_demo: /usr/local/lib/libopencv_core.so.5.0.0

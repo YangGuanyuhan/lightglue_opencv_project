@@ -282,10 +282,6 @@ CMakeFiles/superpoint_lightglue_only_demo.dir/superpoint_lightglue_only_demo.cpp
  /usr/local/include/opencv5/opencv2/flann/miniflann.hpp \
  /usr/local/include/opencv5/opencv2/flann/defines.h \
  /usr/local/include/opencv5/opencv2/flann/config.h \
- /usr/local/include/opencv5/opencv2/features/feature_extractor.hpp \
- /usr/local/include/opencv5/opencv2/features/feature_matcher.hpp \
- /usr/local/include/opencv5/opencv2/features/superpoint.hpp \
- /usr/local/include/opencv5/opencv2/features/lightglue.hpp \
  /usr/local/include/opencv5/opencv2/dnn.hpp \
  /usr/local/include/opencv5/opencv2/dnn/dnn.hpp \
  /usr/local/include/opencv5/opencv2/core/async.hpp \

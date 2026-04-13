@@ -1,10 +1,11 @@
 CMakeFiles/test_aliked.dir/test_aliked.cpp.o: \
  /home/christylinux/desktop/lightglue_opencv_project/test_aliked.cpp \
- /usr/include/stdc-predef.h /usr/local/include/opencv5/opencv2/opencv.hpp \
- /usr/local/include/opencv5/opencv2/opencv_modules.hpp \
- /usr/local/include/opencv5/opencv2/core.hpp \
- /usr/local/include/opencv5/opencv2/core/cvdef.h \
- /usr/local/include/opencv5/opencv2/core/version.hpp \
+ /usr/include/stdc-predef.h \
+ /home/christylinux/opencv_build/opencv/include/opencv2/opencv.hpp \
+ /home/christylinux/opencv_build/opencv/build/opencv2/opencv_modules.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/cvdef.h \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/version.hpp \
  /usr/include/c++/13/limits \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -17,7 +18,7 @@ CMakeFiles/test_aliked.dir/test_aliked.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
  /usr/include/c++/13/pstl/pstl_config.h \
- /usr/local/include/opencv5/opencv2/core/hal/interface.h \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/hal/interface.h \
  /usr/include/c++/13/cstddef \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/c++/13/cstdint \
@@ -30,7 +31,7 @@ CMakeFiles/test_aliked.dir/test_aliked.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /usr/local/include/opencv5/opencv2/core/cv_cpu_dispatch.h \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/cv_cpu_dispatch.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h \
@@ -65,7 +66,7 @@ CMakeFiles/test_aliked.dir/test_aliked.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/13/bits/std_abs.h \
- /usr/local/include/opencv5/opencv2/core/base.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/base.hpp \
  /usr/include/c++/13/climits \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
@@ -100,7 +101,7 @@ CMakeFiles/test_aliked.dir/test_aliked.cpp.o: \
  /usr/include/c++/13/bits/stl_construct.h \
  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /usr/local/include/opencv5/opencv2/core/cvstd.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/cvstd.hpp \
  /usr/include/c++/13/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/c++/13/cctype /usr/include/ctype.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
@@ -172,7 +173,7 @@ CMakeFiles/test_aliked.dir/test_aliked.cpp.o: \
  /usr/include/c++/13/tr1/poly_hermite.tcc \
  /usr/include/c++/13/tr1/poly_laguerre.tcc \
  /usr/include/c++/13/tr1/riemann_zeta.tcc \
- /usr/local/include/opencv5/opencv2/core/cvstd_wrapper.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/cvstd_wrapper.hpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
  /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
@@ -204,29 +205,29 @@ CMakeFiles/test_aliked.dir/test_aliked.cpp.o: \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
- /usr/local/include/opencv5/opencv2/core/fwddecl.hpp \
- /usr/local/include/opencv5/opencv2/core/neon_utils.hpp \
- /usr/local/include/opencv5/opencv2/core/vsx_utils.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/fwddecl.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/neon_utils.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/vsx_utils.hpp \
  /usr/include/assert.h \
- /usr/local/include/opencv5/opencv2/core/exception.hpp \
- /usr/local/include/opencv5/opencv2/core/check.hpp \
- /usr/local/include/opencv5/opencv2/core/traits.hpp \
- /usr/local/include/opencv5/opencv2/core/matx.hpp \
- /usr/local/include/opencv5/opencv2/core/saturate.hpp \
- /usr/local/include/opencv5/opencv2/core/fast_math.hpp \
- /usr/local/include/opencv5/opencv2/core/matx.inl.hpp \
- /usr/local/include/opencv5/opencv2/core/types.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/exception.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/check.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/traits.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/matx.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/saturate.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/fast_math.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/matx.inl.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/types.hpp \
  /usr/include/c++/13/cfloat \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /usr/local/include/opencv5/opencv2/core/mat.hpp \
- /usr/local/include/opencv5/opencv2/core/bufferpool.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/mat.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/bufferpool.hpp \
  /usr/include/c++/13/array /usr/include/c++/13/compare \
- /usr/local/include/opencv5/opencv2/core/mat.inl.hpp \
- /usr/local/include/opencv5/opencv2/core/persistence.hpp \
- /usr/local/include/opencv5/opencv2/core/operations.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/mat.inl.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/persistence.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/operations.hpp \
  /usr/include/c++/13/ostream /usr/include/c++/13/ios \
  /usr/include/c++/13/bits/ios_base.h \
  /usr/include/c++/13/bits/locale_classes.h \
@@ -244,11 +245,11 @@ CMakeFiles/test_aliked.dir/test_aliked.cpp.o: \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc \
- /usr/local/include/opencv5/opencv2/core/cvstd.inl.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/cvstd.inl.hpp \
  /usr/include/c++/13/complex /usr/include/c++/13/sstream \
  /usr/include/c++/13/istream /usr/include/c++/13/bits/istream.tcc \
  /usr/include/c++/13/bits/sstream.tcc \
- /usr/local/include/opencv5/opencv2/core/utility.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/utility.hpp \
  /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
  /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/unordered_map.h \
@@ -261,70 +262,67 @@ CMakeFiles/test_aliked.dir/test_aliked.cpp.o: \
  /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
  /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h \
- /usr/local/include/opencv5/opencv2/core/optim.hpp \
- /usr/local/include/opencv5/opencv2/3d.hpp \
- /usr/local/include/opencv5/opencv2/core/utils/logger.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/optim.hpp \
+ /home/christylinux/opencv_build/opencv/modules/3d/include/opencv2/3d.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/utils/logger.hpp \
  /usr/include/c++/13/iostream \
- /usr/local/include/opencv5/opencv2/core/utils/logger.defines.hpp \
- /usr/local/include/opencv5/opencv2/core/utils/logtag.hpp \
- /usr/local/include/opencv5/opencv2/3d/depth.hpp \
- /usr/local/include/opencv5/opencv2/3d/odometry.hpp \
- /usr/local/include/opencv5/opencv2/3d/odometry_frame.hpp \
- /usr/local/include/opencv5/opencv2/3d/odometry_settings.hpp \
- /usr/local/include/opencv5/opencv2/3d/odometry_frame.hpp \
- /usr/local/include/opencv5/opencv2/3d/odometry_settings.hpp \
- /usr/local/include/opencv5/opencv2/3d/volume.hpp \
- /usr/local/include/opencv5/opencv2/3d/volume_settings.hpp \
- /usr/local/include/opencv5/opencv2/core/affine.hpp \
- /usr/local/include/opencv5/opencv2/3d/ptcloud.hpp \
- /usr/local/include/opencv5/opencv2/calib.hpp \
- /usr/local/include/opencv5/opencv2/features.hpp \
- /usr/local/include/opencv5/opencv2/flann/miniflann.hpp \
- /usr/local/include/opencv5/opencv2/flann/defines.h \
- /usr/local/include/opencv5/opencv2/flann/config.h \
- /usr/local/include/opencv5/opencv2/features/feature_extractor.hpp \
- /usr/local/include/opencv5/opencv2/features/feature_matcher.hpp \
- /usr/local/include/opencv5/opencv2/features/superpoint.hpp \
- /usr/local/include/opencv5/opencv2/features/lightglue.hpp \
- /usr/local/include/opencv5/opencv2/dnn.hpp \
- /usr/local/include/opencv5/opencv2/dnn/dnn.hpp \
- /usr/local/include/opencv5/opencv2/core/async.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/utils/logger.defines.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/utils/logtag.hpp \
+ /home/christylinux/opencv_build/opencv/modules/3d/include/opencv2/3d/depth.hpp \
+ /home/christylinux/opencv_build/opencv/modules/3d/include/opencv2/3d/odometry.hpp \
+ /home/christylinux/opencv_build/opencv/modules/3d/include/opencv2/3d/odometry_frame.hpp \
+ /home/christylinux/opencv_build/opencv/modules/3d/include/opencv2/3d/odometry_settings.hpp \
+ /home/christylinux/opencv_build/opencv/modules/3d/include/opencv2/3d/odometry_frame.hpp \
+ /home/christylinux/opencv_build/opencv/modules/3d/include/opencv2/3d/odometry_settings.hpp \
+ /home/christylinux/opencv_build/opencv/modules/3d/include/opencv2/3d/volume.hpp \
+ /home/christylinux/opencv_build/opencv/modules/3d/include/opencv2/3d/volume_settings.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/affine.hpp \
+ /home/christylinux/opencv_build/opencv/modules/3d/include/opencv2/3d/ptcloud.hpp \
+ /home/christylinux/opencv_build/opencv/modules/calib/include/opencv2/calib.hpp \
+ /home/christylinux/opencv_build/opencv/modules/features/include/opencv2/features.hpp \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/miniflann.hpp \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/defines.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/config.h \
+ /home/christylinux/opencv_build/opencv/modules/dnn/include/opencv2/dnn.hpp \
+ /home/christylinux/opencv_build/opencv/modules/dnn/include/opencv2/dnn/dnn.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/async.hpp \
  /usr/include/c++/13/chrono \
- /usr/local/include/opencv5/opencv2/dnn/version.hpp \
- /usr/local/include/opencv5/opencv2/dnn/dict.hpp /usr/include/c++/13/map \
- /usr/include/c++/13/bits/stl_tree.h /usr/include/c++/13/bits/stl_map.h \
+ /home/christylinux/opencv_build/opencv/modules/dnn/include/opencv2/dnn/version.hpp \
+ /home/christylinux/opencv_build/opencv/modules/dnn/include/opencv2/dnn/dict.hpp \
+ /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
+ /usr/include/c++/13/bits/stl_map.h \
  /usr/include/c++/13/bits/stl_multimap.h \
- /usr/local/include/opencv5/opencv2/dnn/layer.hpp \
- /usr/local/include/opencv5/opencv2/dnn/dnn.inl.hpp \
- /usr/local/include/opencv5/opencv2/dnn/utils/inference_engine.hpp \
- /usr/local/include/opencv5/opencv2/dnn/dnn.hpp \
- /usr/local/include/opencv5/opencv2/flann.hpp \
- /usr/local/include/opencv5/opencv2/flann/flann_base.hpp \
- /usr/local/include/opencv5/opencv2/flann/general.h \
- /usr/local/include/opencv5/opencv2/flann/matrix.h \
- /usr/local/include/opencv5/opencv2/flann/params.h \
- /usr/local/include/opencv5/opencv2/flann/any.h \
- /usr/local/include/opencv5/opencv2/flann/defines.h \
- /usr/local/include/opencv5/opencv2/flann/saving.h \
- /usr/local/include/opencv5/opencv2/flann/nn_index.h \
- /usr/local/include/opencv5/opencv2/flann/result_set.h \
+ /home/christylinux/opencv_build/opencv/modules/dnn/include/opencv2/dnn/layer.hpp \
+ /home/christylinux/opencv_build/opencv/modules/dnn/include/opencv2/dnn/dnn.inl.hpp \
+ /home/christylinux/opencv_build/opencv/modules/dnn/include/opencv2/dnn/utils/inference_engine.hpp \
+ /home/christylinux/opencv_build/opencv/modules/dnn/include/opencv2/dnn/dnn.hpp \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann.hpp \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/flann_base.hpp \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/general.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/matrix.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/params.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/any.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/defines.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/saving.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/nn_index.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/result_set.h \
  /usr/include/c++/13/set /usr/include/c++/13/bits/stl_set.h \
  /usr/include/c++/13/bits/stl_multiset.h \
- /usr/local/include/opencv5/opencv2/flann/all_indices.h \
- /usr/local/include/opencv5/opencv2/flann/kdtree_index.h \
- /usr/local/include/opencv5/opencv2/flann/dynamic_bitset.h \
- /usr/local/include/opencv5/opencv2/flann/dist.h \
- /usr/local/include/opencv5/opencv2/flann/heap.h \
- /usr/local/include/opencv5/opencv2/flann/allocator.h \
- /usr/local/include/opencv5/opencv2/flann/random.h \
- /usr/local/include/opencv5/opencv2/flann/kdtree_single_index.h \
- /usr/local/include/opencv5/opencv2/flann/kmeans_index.h \
- /usr/local/include/opencv5/opencv2/flann/logger.h \
- /usr/local/include/opencv5/opencv2/flann/composite_index.h \
- /usr/local/include/opencv5/opencv2/flann/linear_index.h \
- /usr/local/include/opencv5/opencv2/flann/hierarchical_clustering_index.h \
- /usr/local/include/opencv5/opencv2/flann/lsh_index.h \
- /usr/local/include/opencv5/opencv2/flann/lsh_table.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/all_indices.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/kdtree_index.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/dynamic_bitset.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/dist.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/heap.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/allocator.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/random.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/kdtree_single_index.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/kmeans_index.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/logger.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/composite_index.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/linear_index.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/hierarchical_clustering_index.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/lsh_index.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/lsh_table.h \
  /usr/include/c++/13/iomanip /usr/include/c++/13/locale \
  /usr/include/c++/13/bits/locale_facets_nonio.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
@@ -333,54 +331,54 @@ CMakeFiles/test_aliked.dir/test_aliked.cpp.o: \
  /usr/include/c++/13/bits/locale_facets_nonio.tcc \
  /usr/include/c++/13/bits/locale_conv.h \
  /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/math.h \
- /usr/local/include/opencv5/opencv2/flann/autotuned_index.h \
- /usr/local/include/opencv5/opencv2/flann/ground_truth.h \
- /usr/local/include/opencv5/opencv2/flann/index_testing.h \
- /usr/local/include/opencv5/opencv2/flann/timer.h \
- /usr/local/include/opencv5/opencv2/flann/sampling.h \
- /usr/local/include/opencv5/opencv2/highgui.hpp \
- /usr/local/include/opencv5/opencv2/imgcodecs.hpp \
- /usr/local/include/opencv5/opencv2/videoio.hpp \
- /usr/local/include/opencv5/opencv2/imgproc.hpp \
- /usr/local/include/opencv5/opencv2/imgproc/segmentation.hpp \
- /usr/local/include/opencv5/opencv2/objdetect.hpp \
- /usr/local/include/opencv5/opencv2/objdetect/aruco_detector.hpp \
- /usr/local/include/opencv5/opencv2/objdetect/aruco_dictionary.hpp \
- /usr/local/include/opencv5/opencv2/objdetect/aruco_board.hpp \
- /usr/local/include/opencv5/opencv2/objdetect/graphical_code_detector.hpp \
- /usr/local/include/opencv5/opencv2/objdetect/mcc_checker_detector.hpp \
- /usr/local/include/opencv5/opencv2/objdetect/face.hpp \
- /usr/local/include/opencv5/opencv2/objdetect/charuco_detector.hpp \
- /usr/local/include/opencv5/opencv2/objdetect/barcode.hpp \
- /usr/local/include/opencv5/opencv2/photo.hpp \
- /usr/local/include/opencv5/opencv2/photo/ccm.hpp \
- /usr/local/include/opencv5/opencv2/stereo.hpp \
- /usr/local/include/opencv5/opencv2/stitching.hpp \
- /usr/local/include/opencv5/opencv2/stitching/warpers.hpp \
- /usr/local/include/opencv5/opencv2/stitching/detail/warpers.hpp \
- /usr/local/include/opencv5/opencv2/core/cuda.hpp \
- /usr/local/include/opencv5/opencv2/core/cuda_types.hpp \
- /usr/local/include/opencv5/opencv2/core/cuda.inl.hpp \
- /usr/local/include/opencv5/opencv2/stitching/detail/warpers_inl.hpp \
- /usr/local/include/opencv5/opencv2/stitching/detail/warpers.hpp \
- /usr/local/include/opencv5/opencv2/stitching/detail/matchers.hpp \
- /usr/local/include/opencv5/opencv2/stitching/detail/motion_estimators.hpp \
- /usr/local/include/opencv5/opencv2/stitching/detail/matchers.hpp \
- /usr/local/include/opencv5/opencv2/stitching/detail/util.hpp \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/autotuned_index.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/ground_truth.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/index_testing.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/timer.h \
+ /home/christylinux/opencv_build/opencv/modules/flann/include/opencv2/flann/sampling.h \
+ /home/christylinux/opencv_build/opencv/modules/highgui/include/opencv2/highgui.hpp \
+ /home/christylinux/opencv_build/opencv/modules/imgcodecs/include/opencv2/imgcodecs.hpp \
+ /home/christylinux/opencv_build/opencv/modules/videoio/include/opencv2/videoio.hpp \
+ /home/christylinux/opencv_build/opencv/modules/imgproc/include/opencv2/imgproc.hpp \
+ /home/christylinux/opencv_build/opencv/modules/imgproc/include/opencv2/imgproc/segmentation.hpp \
+ /home/christylinux/opencv_build/opencv/modules/objdetect/include/opencv2/objdetect.hpp \
+ /home/christylinux/opencv_build/opencv/modules/objdetect/include/opencv2/objdetect/aruco_detector.hpp \
+ /home/christylinux/opencv_build/opencv/modules/objdetect/include/opencv2/objdetect/aruco_dictionary.hpp \
+ /home/christylinux/opencv_build/opencv/modules/objdetect/include/opencv2/objdetect/aruco_board.hpp \
+ /home/christylinux/opencv_build/opencv/modules/objdetect/include/opencv2/objdetect/graphical_code_detector.hpp \
+ /home/christylinux/opencv_build/opencv/modules/objdetect/include/opencv2/objdetect/mcc_checker_detector.hpp \
+ /home/christylinux/opencv_build/opencv/modules/objdetect/include/opencv2/objdetect/face.hpp \
+ /home/christylinux/opencv_build/opencv/modules/objdetect/include/opencv2/objdetect/charuco_detector.hpp \
+ /home/christylinux/opencv_build/opencv/modules/objdetect/include/opencv2/objdetect/barcode.hpp \
+ /home/christylinux/opencv_build/opencv/modules/photo/include/opencv2/photo.hpp \
+ /home/christylinux/opencv_build/opencv/modules/photo/include/opencv2/photo/ccm.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stereo/include/opencv2/stereo.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/warpers.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/detail/warpers.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/cuda.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/cuda_types.hpp \
+ /home/christylinux/opencv_build/opencv/modules/core/include/opencv2/core/cuda.inl.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/detail/warpers_inl.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/detail/warpers.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/detail/matchers.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/detail/motion_estimators.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/detail/matchers.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/detail/util.hpp \
  /usr/include/c++/13/list /usr/include/c++/13/bits/stl_list.h \
  /usr/include/c++/13/bits/list.tcc \
- /usr/local/include/opencv5/opencv2/stitching/detail/util_inl.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/detail/util_inl.hpp \
  /usr/include/c++/13/queue /usr/include/c++/13/deque \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
  /usr/include/c++/13/bits/stl_queue.h \
- /usr/local/include/opencv5/opencv2/stitching/detail/camera.hpp \
- /usr/local/include/opencv5/opencv2/stitching/detail/exposure_compensate.hpp \
- /usr/local/include/opencv5/opencv2/stitching/detail/seam_finders.hpp \
- /usr/local/include/opencv5/opencv2/stitching/detail/blenders.hpp \
- /usr/local/include/opencv5/opencv2/stitching/detail/camera.hpp \
- /usr/local/include/opencv5/opencv2/video.hpp \
- /usr/local/include/opencv5/opencv2/video/tracking.hpp \
- /usr/local/include/opencv5/opencv2/video/background_segm.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/detail/camera.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/detail/exposure_compensate.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/detail/seam_finders.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/detail/blenders.hpp \
+ /home/christylinux/opencv_build/opencv/modules/stitching/include/opencv2/stitching/detail/camera.hpp \
+ /home/christylinux/opencv_build/opencv/modules/video/include/opencv2/video.hpp \
+ /home/christylinux/opencv_build/opencv/modules/video/include/opencv2/video/tracking.hpp \
+ /home/christylinux/opencv_build/opencv/modules/video/include/opencv2/video/background_segm.hpp \
  /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
  /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/codecvt \
  /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h

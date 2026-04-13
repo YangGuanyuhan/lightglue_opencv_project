@@ -8,7 +8,7 @@ using namespace cv;
 using namespace std;
 
 
-const string LG_MODEL_PATH = "../model/superpoint_lightglue_simplified_2.onnx";
+const string LG_MODEL_PATH = "../model/superpoint_lightglue.onnx";
 const int DESCRIPTOR_DIM = 256;
 
 const int NUM_KPTS_0 = 500;
@@ -163,7 +163,7 @@ int main()
 
     // Load ONNX
     cout << "Loading LightGlue model " << LG_MODEL_PATH << endl;
-    dnn::Net net = dnn::readNetFromONNX(LG_MODEL_PATH);
+    dnn::Net net = dnn::readNetFromONNX(LG_MODEL_PATH,dnn::ENGINE_NEW);
     net.enableWinograd(false);// Disable Winograd optimization to avoid potential issues
     cout << "Model loaded successfully" << endl;
 
