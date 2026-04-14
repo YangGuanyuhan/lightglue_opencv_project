@@ -1,725 +1,155 @@
-OpenCV version 5.0.0-pre
+================ Runtime Info ================
+Model (configured path): ../model/superpoint_lightglue.onnx
+Model (file name): superpoint_lightglue.onnx
+Model (absolute path): /home/christylinux/desktop/lightglue_opencv_project/build/../model/superpoint_lightglue.onnx
+OpenCV version string: 5.0.0-pre
+OpenCV major/minor/revision: 5.0.0
+OpenCV detailed build information:
+
+General configuration for OpenCV 5.0.0-pre =====================================
+  Version control:               4.13.0-980-g66e994d839
+
+  Platform:
+    Timestamp:                   2026-03-29T16:41:25Z
+    Host:                        Linux 5.15.167.4-microsoft-standard-WSL2 x86_64
+    CMake:                       3.28.3
+    CMake generator:             Unix Makefiles
+    CMake build tool:            /usr/bin/make
+    Configuration:               RELEASE
+    Algorithm Hint:              ALGO_HINT_ACCURATE
+
+  CPU/HW features:
+    Baseline:                    SSE SSE2 SSE3
+      requested:                 SSE3
+    Dispatched code generation:  SSE4_1 SSE4_2 AVX FP16 AVX2 AVX512_SKX
+      SSE4_1 (20 files):         + SSSE3 SSE4_1
+      SSE4_2 (2 files):          + SSSE3 SSE4_1 POPCNT SSE4_2
+      AVX (13 files):            + SSSE3 SSE4_1 POPCNT SSE4_2 AVX
+      FP16 (1 files):            + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16
+      AVX2 (45 files):           + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16 AVX2 FMA3
+      AVX512_SKX (12 files):     + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16 AVX2 FMA3 AVX_512F AVX512_COMMON AVX512_SKX
+
+  C/C++:
+    Built as dynamic libs?:      YES
+    C++ standard:                17
+    C++ Compiler:                /usr/bin/g++  (ver 13.3.0)
+    C++ flags (Release):         -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -O3 -DNDEBUG  -DNDEBUG
+    C++ flags (Debug):           -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -g  -O0 -DDEBUG -D_DEBUG
+    C Compiler:                  /usr/bin/gcc
+    C flags (Release):           -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse3 -fvisibility=hidden -O3 -DNDEBUG  -DNDEBUG
+    C flags (Debug):             -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse3 -fvisibility=hidden -g  -O0 -DDEBUG -D_DEBUG
+    Linker flags (Release):      -Wl,--exclude-libs,libippicv.a -Wl,--exclude-libs,libippiw.a   -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  
+    Linker flags (Debug):        -Wl,--exclude-libs,libippicv.a -Wl,--exclude-libs,libippiw.a   -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  
+    ccache:                      NO
+    Precompiled headers:         NO
+    Extra dependencies:          dl m pthread rt
+    3rdparty dependencies:
+
+  OpenCV modules:
+    To be built:                 3d calib core dnn features flann highgui imgcodecs imgproc java objdetect photo python3 stereo stitching ts video videoio
+    Disabled:                    world
+    Disabled by dependency:      -
+    Unavailable:                 -
+    Applications:                tests perf_tests examples apps
+    Documentation:               NO
+    Non-free algorithms:         NO
+
+  GUI:                           GTK3
+    GTK+:                        YES (ver 3.24.41)
+    VTK support:                 NO
+    Built-in Unicode font:       YES
+
+  Media I/O: 
+    ZLib:                        /usr/lib/x86_64-linux-gnu/libz.so (ver 1.3)
+    JPEG:                        /usr/lib/x86_64-linux-gnu/libjpeg.so (ver 80)
+    WEBP:                        /usr/lib/x86_64-linux-gnu/libwebp.so (ver decoder: 0x0209, encoder: 0x020f, demux: 0x0107)
+    AVIF:                        NO
+    PNG:                         /usr/lib/x86_64-linux-gnu/libpng.so (ver 1.6.43)
+    TIFF:                        /usr/lib/x86_64-linux-gnu/libtiff.so (ver 42 / 4.5.1)
+    JPEG 2000:                   build (ver 2.5.3)
+    OpenEXR:                     OpenEXR::OpenEXR (ver 3.1.5)
+    GIF:                         YES
+    HDR:                         YES
+    SUNRASTER:                   YES
+    PXM:                         YES
+    PFM:                         YES
+
+  Video I/O:
+    FFMPEG:                      YES
+      avcodec:                   YES (60.31.102)
+      avformat:                  YES (60.16.100)
+      avutil:                    YES (58.29.100)
+      swscale:                   YES (7.5.100)
+      avdevice:                  NO
+    GStreamer:                   YES (1.24.2)
+    v4l/v4l2:                    YES (linux/videodev2.h)
+    Orbbec:                      YES
+
+  Parallel framework:            pthreads
+
+  Trace:                         YES (with Intel ITT(3.25.4))
+
+  Other third-party libraries:
+    Intel IPP:                   2022.3.0 [2022.3.0]
+           at:                   /home/christylinux/opencv_build/opencv/build/3rdparty/ippicv/ippicv_lnx/icv
+    Intel IPP IW:                sources (2022.3.0)
+              at:                /home/christylinux/opencv_build/opencv/build/3rdparty/ippicv/ippicv_lnx/iw
+    VA:                          NO
+    Lapack:                      YES (Built-In libclapack)
+    Eigen:                       NO
+    Custom HAL:                  YES (ipp (ver 0.0.1))
+    Protobuf:                    build (3.19.1)
+    Flatbuffers:                 builtin/3rdparty (25.9.23)
+
+  OpenCL:                        YES (no extra features)
+    Include path:                /home/christylinux/opencv_build/opencv/3rdparty/include/opencl/1.2
+    Link libraries:              Dynamic load
+
+  ONNX Runtime:                  YES (ver 1.24.2)
+    Include path:                /home/christylinux/opencv_build/opencv/build/3rdparty/onnxruntime/onnxruntime-linux-x64-1.24.2/include
+    Link libraries:              /home/christylinux/opencv_build/opencv/build/3rdparty/onnxruntime/onnxruntime-linux-x64-1.24.2/lib/libonnxruntime.so
+
+  Python 3:
+    Interpreter:                 /home/christylinux/miniconda3/envs/opencv_env/bin/python3 (ver 3.10.18)
+    Libraries:                   /home/christylinux/miniconda3/envs/opencv_env/lib/libpython3.10.so (ver 3.10.18)
+    Limited API:                 NO
+    numpy:                       /usr/lib/python3/dist-packages/numpy/core/include (ver 1.26.4)
+    install path:                lib/python3.10/site-packages/cv2/python-3.10
+
+  Python (for build):            /home/christylinux/miniconda3/envs/opencv_env/bin/python3
+
+  Java:                          
+    ant:                         NO
+    Java:                        YES (ver 21.0.10)
+    JNI:                         /usr/lib/jvm/default-java/include /usr/lib/jvm/default-java/include/linux /usr/lib/jvm/default-java/include
+    Java wrappers:               YES (JAVA)
+    Java tests:                  NO
+
+  Install to:                    /usr/local
+-----------------------------------------------------------------
+
+
+DNN inference engine: ENGINE_NEW (enum=2)
+DNN_TRACE_ALL=<unset>
+==============================================
 Loading LightGlue model ../model/superpoint_lightglue.onnx
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/posenc/Gather' axis=0, outputs=/posenc/Gather_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/posenc/Gather_1' axis=0, outputs=/posenc/Gather_1_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/posenc/Gather_2' axis=0, outputs=/posenc/Gather_2_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/posenc/Gather_3' axis=0, outputs=/posenc/Gather_3_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/posenc/Gather_4' axis=0, outputs=/posenc/Gather_4_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/posenc_1/Gather' axis=0, outputs=/posenc_1/Gather_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/posenc_1/Gather_1' axis=0, outputs=/posenc_1/Gather_1_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/posenc_1/Gather_2' axis=0, outputs=/posenc_1/Gather_2_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/posenc_1/Gather_3' axis=0, outputs=/posenc_1/Gather_3_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/posenc_1/Gather_4' axis=0, outputs=/posenc_1/Gather_4_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather' axis=0, outputs=/self_attn.0/Gather_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_1' axis=0, outputs=/self_attn.0/Gather_1_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_2' axis=0, outputs=/self_attn.0/Gather_2_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_3' axis=4, outputs=/self_attn.0/Gather_3_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_4' axis=4, outputs=/self_attn.0/Gather_4_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_5' axis=4, outputs=/self_attn.0/Gather_5_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_6' axis=0, outputs=/self_attn.0/Gather_6_output_0
-[ WARN:0@8.538] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_7' axis=0, outputs=/self_attn.0/Gather_7_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_8' axis=0, outputs=/self_attn.0/Gather_8_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_9' axis=0, outputs=/self_attn.0/Gather_9_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_10' axis=0, outputs=/self_attn.0/Gather_10_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_11' axis=0, outputs=/self_attn.0/Gather_11_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_12' axis=0, outputs=/self_attn.0/Gather_12_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_13' axis=0, outputs=/self_attn.0/Gather_13_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_14' axis=0, outputs=/self_attn.0/Gather_14_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_15' axis=0, outputs=/self_attn.0/Gather_15_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_16' axis=0, outputs=/self_attn.0/Gather_16_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_17' axis=0, outputs=/self_attn.0/Gather_17_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_18' axis=0, outputs=/self_attn.0/Gather_18_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_19' axis=0, outputs=/self_attn.0/Gather_19_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_20' axis=0, outputs=/self_attn.0/Gather_20_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_21' axis=0, outputs=/self_attn.0/Gather_21_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_22' axis=0, outputs=/self_attn.0/Gather_22_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_23' axis=0, outputs=/self_attn.0/Gather_23_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_24' axis=0, outputs=/self_attn.0/Gather_24_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_25' axis=0, outputs=/self_attn.0/Gather_25_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_26' axis=0, outputs=/self_attn.0/Gather_26_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_27' axis=0, outputs=/self_attn.0/Gather_27_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_28' axis=0, outputs=/self_attn.0/Gather_28_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_29' axis=0, outputs=/self_attn.0/Gather_29_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_30' axis=0, outputs=/self_attn.0/Gather_30_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_31' axis=0, outputs=/self_attn.0/Gather_31_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_32' axis=0, outputs=/self_attn.0/Gather_32_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_33' axis=4, outputs=/self_attn.0/Gather_33_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_34' axis=4, outputs=/self_attn.0/Gather_34_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_35' axis=4, outputs=/self_attn.0/Gather_35_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_36' axis=0, outputs=/self_attn.0/Gather_36_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_37' axis=0, outputs=/self_attn.0/Gather_37_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_38' axis=0, outputs=/self_attn.0/Gather_38_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_39' axis=0, outputs=/self_attn.0/Gather_39_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_40' axis=0, outputs=/self_attn.0/Gather_40_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_41' axis=0, outputs=/self_attn.0/Gather_41_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_42' axis=0, outputs=/self_attn.0/Gather_42_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_43' axis=0, outputs=/self_attn.0/Gather_43_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_44' axis=0, outputs=/self_attn.0/Gather_44_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_45' axis=0, outputs=/self_attn.0/Gather_45_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_46' axis=0, outputs=/self_attn.0/Gather_46_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_47' axis=0, outputs=/self_attn.0/Gather_47_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_48' axis=0, outputs=/self_attn.0/Gather_48_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_49' axis=0, outputs=/self_attn.0/Gather_49_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_50' axis=0, outputs=/self_attn.0/Gather_50_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_51' axis=0, outputs=/self_attn.0/Gather_51_output_0
-[ WARN:0@8.539] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_52' axis=0, outputs=/self_attn.0/Gather_52_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_53' axis=0, outputs=/self_attn.0/Gather_53_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_54' axis=0, outputs=/self_attn.0/Gather_54_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_55' axis=0, outputs=/self_attn.0/Gather_55_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_56' axis=0, outputs=/self_attn.0/Gather_56_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_57' axis=0, outputs=/self_attn.0/Gather_57_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_58' axis=0, outputs=/self_attn.0/Gather_58_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.0/Gather_59' axis=0, outputs=/self_attn.0/Gather_59_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather' axis=0, outputs=/cross_attn.0/Gather_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_1' axis=0, outputs=/cross_attn.0/Gather_1_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_2' axis=0, outputs=/cross_attn.0/Gather_2_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_3' axis=0, outputs=/cross_attn.0/Gather_3_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_4' axis=0, outputs=/cross_attn.0/Gather_4_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_5' axis=0, outputs=/cross_attn.0/Gather_5_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_6' axis=0, outputs=/cross_attn.0/Gather_6_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_7' axis=0, outputs=/cross_attn.0/Gather_7_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_8' axis=0, outputs=/cross_attn.0/Gather_8_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_9' axis=0, outputs=/cross_attn.0/Gather_9_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_10' axis=0, outputs=/cross_attn.0/Gather_10_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_11' axis=0, outputs=/cross_attn.0/Gather_11_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_12' axis=0, outputs=/cross_attn.0/Gather_12_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_13' axis=0, outputs=/cross_attn.0/Gather_13_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_14' axis=0, outputs=/cross_attn.0/Gather_14_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_15' axis=0, outputs=/cross_attn.0/Gather_15_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_16' axis=0, outputs=/cross_attn.0/Gather_16_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_17' axis=0, outputs=/cross_attn.0/Gather_17_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_18' axis=0, outputs=/cross_attn.0/Gather_18_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.0/Gather_19' axis=0, outputs=/cross_attn.0/Gather_19_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather' axis=0, outputs=/self_attn.1/Gather_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_1' axis=0, outputs=/self_attn.1/Gather_1_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_2' axis=0, outputs=/self_attn.1/Gather_2_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_3' axis=4, outputs=/self_attn.1/Gather_3_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_4' axis=4, outputs=/self_attn.1/Gather_4_output_0
-[ WARN:0@8.540] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_5' axis=4, outputs=/self_attn.1/Gather_5_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_6' axis=0, outputs=/self_attn.1/Gather_6_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_7' axis=0, outputs=/self_attn.1/Gather_7_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_8' axis=0, outputs=/self_attn.1/Gather_8_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_9' axis=0, outputs=/self_attn.1/Gather_9_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_10' axis=0, outputs=/self_attn.1/Gather_10_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_11' axis=0, outputs=/self_attn.1/Gather_11_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_12' axis=0, outputs=/self_attn.1/Gather_12_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_13' axis=0, outputs=/self_attn.1/Gather_13_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_14' axis=0, outputs=/self_attn.1/Gather_14_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_15' axis=0, outputs=/self_attn.1/Gather_15_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_16' axis=0, outputs=/self_attn.1/Gather_16_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_17' axis=0, outputs=/self_attn.1/Gather_17_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_18' axis=0, outputs=/self_attn.1/Gather_18_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_19' axis=0, outputs=/self_attn.1/Gather_19_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_20' axis=0, outputs=/self_attn.1/Gather_20_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_21' axis=0, outputs=/self_attn.1/Gather_21_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_22' axis=0, outputs=/self_attn.1/Gather_22_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_23' axis=0, outputs=/self_attn.1/Gather_23_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_24' axis=0, outputs=/self_attn.1/Gather_24_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_25' axis=0, outputs=/self_attn.1/Gather_25_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_26' axis=0, outputs=/self_attn.1/Gather_26_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_27' axis=0, outputs=/self_attn.1/Gather_27_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_28' axis=0, outputs=/self_attn.1/Gather_28_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_29' axis=0, outputs=/self_attn.1/Gather_29_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_30' axis=0, outputs=/self_attn.1/Gather_30_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_31' axis=4, outputs=/self_attn.1/Gather_31_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_32' axis=4, outputs=/self_attn.1/Gather_32_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_33' axis=4, outputs=/self_attn.1/Gather_33_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_34' axis=0, outputs=/self_attn.1/Gather_34_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_35' axis=0, outputs=/self_attn.1/Gather_35_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_36' axis=0, outputs=/self_attn.1/Gather_36_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_37' axis=0, outputs=/self_attn.1/Gather_37_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_38' axis=0, outputs=/self_attn.1/Gather_38_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_39' axis=0, outputs=/self_attn.1/Gather_39_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_40' axis=0, outputs=/self_attn.1/Gather_40_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_41' axis=0, outputs=/self_attn.1/Gather_41_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_42' axis=0, outputs=/self_attn.1/Gather_42_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_43' axis=0, outputs=/self_attn.1/Gather_43_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_44' axis=0, outputs=/self_attn.1/Gather_44_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_45' axis=0, outputs=/self_attn.1/Gather_45_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_46' axis=0, outputs=/self_attn.1/Gather_46_output_0
-[ WARN:0@8.541] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_47' axis=0, outputs=/self_attn.1/Gather_47_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_48' axis=0, outputs=/self_attn.1/Gather_48_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_49' axis=0, outputs=/self_attn.1/Gather_49_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_50' axis=0, outputs=/self_attn.1/Gather_50_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_51' axis=0, outputs=/self_attn.1/Gather_51_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_52' axis=0, outputs=/self_attn.1/Gather_52_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_53' axis=0, outputs=/self_attn.1/Gather_53_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_54' axis=0, outputs=/self_attn.1/Gather_54_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.1/Gather_55' axis=0, outputs=/self_attn.1/Gather_55_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather' axis=0, outputs=/cross_attn.1/Gather_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_1' axis=0, outputs=/cross_attn.1/Gather_1_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_2' axis=0, outputs=/cross_attn.1/Gather_2_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_3' axis=0, outputs=/cross_attn.1/Gather_3_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_4' axis=0, outputs=/cross_attn.1/Gather_4_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_5' axis=0, outputs=/cross_attn.1/Gather_5_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_6' axis=0, outputs=/cross_attn.1/Gather_6_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_7' axis=0, outputs=/cross_attn.1/Gather_7_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_8' axis=0, outputs=/cross_attn.1/Gather_8_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_9' axis=0, outputs=/cross_attn.1/Gather_9_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_10' axis=0, outputs=/cross_attn.1/Gather_10_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_11' axis=0, outputs=/cross_attn.1/Gather_11_output_0
-[ WARN:0@8.542] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_12' axis=0, outputs=/cross_attn.1/Gather_12_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_13' axis=0, outputs=/cross_attn.1/Gather_13_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_14' axis=0, outputs=/cross_attn.1/Gather_14_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_15' axis=0, outputs=/cross_attn.1/Gather_15_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_16' axis=0, outputs=/cross_attn.1/Gather_16_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_17' axis=0, outputs=/cross_attn.1/Gather_17_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_18' axis=0, outputs=/cross_attn.1/Gather_18_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.1/Gather_19' axis=0, outputs=/cross_attn.1/Gather_19_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather' axis=0, outputs=/self_attn.2/Gather_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_1' axis=0, outputs=/self_attn.2/Gather_1_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_2' axis=0, outputs=/self_attn.2/Gather_2_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_3' axis=4, outputs=/self_attn.2/Gather_3_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_4' axis=4, outputs=/self_attn.2/Gather_4_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_5' axis=4, outputs=/self_attn.2/Gather_5_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_6' axis=0, outputs=/self_attn.2/Gather_6_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_7' axis=0, outputs=/self_attn.2/Gather_7_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_8' axis=0, outputs=/self_attn.2/Gather_8_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_9' axis=0, outputs=/self_attn.2/Gather_9_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_10' axis=0, outputs=/self_attn.2/Gather_10_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_11' axis=0, outputs=/self_attn.2/Gather_11_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_12' axis=0, outputs=/self_attn.2/Gather_12_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_13' axis=0, outputs=/self_attn.2/Gather_13_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_14' axis=0, outputs=/self_attn.2/Gather_14_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_15' axis=0, outputs=/self_attn.2/Gather_15_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_16' axis=0, outputs=/self_attn.2/Gather_16_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_17' axis=0, outputs=/self_attn.2/Gather_17_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_18' axis=0, outputs=/self_attn.2/Gather_18_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_19' axis=0, outputs=/self_attn.2/Gather_19_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_20' axis=0, outputs=/self_attn.2/Gather_20_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_21' axis=0, outputs=/self_attn.2/Gather_21_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_22' axis=0, outputs=/self_attn.2/Gather_22_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_23' axis=0, outputs=/self_attn.2/Gather_23_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_24' axis=0, outputs=/self_attn.2/Gather_24_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_25' axis=0, outputs=/self_attn.2/Gather_25_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_26' axis=0, outputs=/self_attn.2/Gather_26_output_0
-[ WARN:0@8.543] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_27' axis=0, outputs=/self_attn.2/Gather_27_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_28' axis=0, outputs=/self_attn.2/Gather_28_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_29' axis=0, outputs=/self_attn.2/Gather_29_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_30' axis=0, outputs=/self_attn.2/Gather_30_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_31' axis=4, outputs=/self_attn.2/Gather_31_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_32' axis=4, outputs=/self_attn.2/Gather_32_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_33' axis=4, outputs=/self_attn.2/Gather_33_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_34' axis=0, outputs=/self_attn.2/Gather_34_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_35' axis=0, outputs=/self_attn.2/Gather_35_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_36' axis=0, outputs=/self_attn.2/Gather_36_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_37' axis=0, outputs=/self_attn.2/Gather_37_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_38' axis=0, outputs=/self_attn.2/Gather_38_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_39' axis=0, outputs=/self_attn.2/Gather_39_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_40' axis=0, outputs=/self_attn.2/Gather_40_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_41' axis=0, outputs=/self_attn.2/Gather_41_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_42' axis=0, outputs=/self_attn.2/Gather_42_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_43' axis=0, outputs=/self_attn.2/Gather_43_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_44' axis=0, outputs=/self_attn.2/Gather_44_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_45' axis=0, outputs=/self_attn.2/Gather_45_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_46' axis=0, outputs=/self_attn.2/Gather_46_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_47' axis=0, outputs=/self_attn.2/Gather_47_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_48' axis=0, outputs=/self_attn.2/Gather_48_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_49' axis=0, outputs=/self_attn.2/Gather_49_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_50' axis=0, outputs=/self_attn.2/Gather_50_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_51' axis=0, outputs=/self_attn.2/Gather_51_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_52' axis=0, outputs=/self_attn.2/Gather_52_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_53' axis=0, outputs=/self_attn.2/Gather_53_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_54' axis=0, outputs=/self_attn.2/Gather_54_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.2/Gather_55' axis=0, outputs=/self_attn.2/Gather_55_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather' axis=0, outputs=/cross_attn.2/Gather_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_1' axis=0, outputs=/cross_attn.2/Gather_1_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_2' axis=0, outputs=/cross_attn.2/Gather_2_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_3' axis=0, outputs=/cross_attn.2/Gather_3_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_4' axis=0, outputs=/cross_attn.2/Gather_4_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_5' axis=0, outputs=/cross_attn.2/Gather_5_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_6' axis=0, outputs=/cross_attn.2/Gather_6_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_7' axis=0, outputs=/cross_attn.2/Gather_7_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_8' axis=0, outputs=/cross_attn.2/Gather_8_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_9' axis=0, outputs=/cross_attn.2/Gather_9_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_10' axis=0, outputs=/cross_attn.2/Gather_10_output_0
-[ WARN:0@8.544] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_11' axis=0, outputs=/cross_attn.2/Gather_11_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_12' axis=0, outputs=/cross_attn.2/Gather_12_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_13' axis=0, outputs=/cross_attn.2/Gather_13_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_14' axis=0, outputs=/cross_attn.2/Gather_14_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_15' axis=0, outputs=/cross_attn.2/Gather_15_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_16' axis=0, outputs=/cross_attn.2/Gather_16_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_17' axis=0, outputs=/cross_attn.2/Gather_17_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_18' axis=0, outputs=/cross_attn.2/Gather_18_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.2/Gather_19' axis=0, outputs=/cross_attn.2/Gather_19_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather' axis=0, outputs=/self_attn.3/Gather_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_1' axis=0, outputs=/self_attn.3/Gather_1_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_2' axis=0, outputs=/self_attn.3/Gather_2_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_3' axis=4, outputs=/self_attn.3/Gather_3_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_4' axis=4, outputs=/self_attn.3/Gather_4_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_5' axis=4, outputs=/self_attn.3/Gather_5_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_6' axis=0, outputs=/self_attn.3/Gather_6_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_7' axis=0, outputs=/self_attn.3/Gather_7_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_8' axis=0, outputs=/self_attn.3/Gather_8_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_9' axis=0, outputs=/self_attn.3/Gather_9_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_10' axis=0, outputs=/self_attn.3/Gather_10_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_11' axis=0, outputs=/self_attn.3/Gather_11_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_12' axis=0, outputs=/self_attn.3/Gather_12_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_13' axis=0, outputs=/self_attn.3/Gather_13_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_14' axis=0, outputs=/self_attn.3/Gather_14_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_15' axis=0, outputs=/self_attn.3/Gather_15_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_16' axis=0, outputs=/self_attn.3/Gather_16_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_17' axis=0, outputs=/self_attn.3/Gather_17_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_18' axis=0, outputs=/self_attn.3/Gather_18_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_19' axis=0, outputs=/self_attn.3/Gather_19_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_20' axis=0, outputs=/self_attn.3/Gather_20_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_21' axis=0, outputs=/self_attn.3/Gather_21_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_22' axis=0, outputs=/self_attn.3/Gather_22_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_23' axis=0, outputs=/self_attn.3/Gather_23_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_24' axis=0, outputs=/self_attn.3/Gather_24_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_25' axis=0, outputs=/self_attn.3/Gather_25_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_26' axis=0, outputs=/self_attn.3/Gather_26_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_27' axis=0, outputs=/self_attn.3/Gather_27_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_28' axis=0, outputs=/self_attn.3/Gather_28_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_29' axis=0, outputs=/self_attn.3/Gather_29_output_0
-[ WARN:0@8.545] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_30' axis=0, outputs=/self_attn.3/Gather_30_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_31' axis=4, outputs=/self_attn.3/Gather_31_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_32' axis=4, outputs=/self_attn.3/Gather_32_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_33' axis=4, outputs=/self_attn.3/Gather_33_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_34' axis=0, outputs=/self_attn.3/Gather_34_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_35' axis=0, outputs=/self_attn.3/Gather_35_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_36' axis=0, outputs=/self_attn.3/Gather_36_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_37' axis=0, outputs=/self_attn.3/Gather_37_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_38' axis=0, outputs=/self_attn.3/Gather_38_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_39' axis=0, outputs=/self_attn.3/Gather_39_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_40' axis=0, outputs=/self_attn.3/Gather_40_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_41' axis=0, outputs=/self_attn.3/Gather_41_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_42' axis=0, outputs=/self_attn.3/Gather_42_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_43' axis=0, outputs=/self_attn.3/Gather_43_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_44' axis=0, outputs=/self_attn.3/Gather_44_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_45' axis=0, outputs=/self_attn.3/Gather_45_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_46' axis=0, outputs=/self_attn.3/Gather_46_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_47' axis=0, outputs=/self_attn.3/Gather_47_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_48' axis=0, outputs=/self_attn.3/Gather_48_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_49' axis=0, outputs=/self_attn.3/Gather_49_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_50' axis=0, outputs=/self_attn.3/Gather_50_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_51' axis=0, outputs=/self_attn.3/Gather_51_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_52' axis=0, outputs=/self_attn.3/Gather_52_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_53' axis=0, outputs=/self_attn.3/Gather_53_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_54' axis=0, outputs=/self_attn.3/Gather_54_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.3/Gather_55' axis=0, outputs=/self_attn.3/Gather_55_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather' axis=0, outputs=/cross_attn.3/Gather_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_1' axis=0, outputs=/cross_attn.3/Gather_1_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_2' axis=0, outputs=/cross_attn.3/Gather_2_output_0
-[ WARN:0@8.546] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_3' axis=0, outputs=/cross_attn.3/Gather_3_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_4' axis=0, outputs=/cross_attn.3/Gather_4_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_5' axis=0, outputs=/cross_attn.3/Gather_5_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_6' axis=0, outputs=/cross_attn.3/Gather_6_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_7' axis=0, outputs=/cross_attn.3/Gather_7_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_8' axis=0, outputs=/cross_attn.3/Gather_8_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_9' axis=0, outputs=/cross_attn.3/Gather_9_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_10' axis=0, outputs=/cross_attn.3/Gather_10_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_11' axis=0, outputs=/cross_attn.3/Gather_11_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_12' axis=0, outputs=/cross_attn.3/Gather_12_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_13' axis=0, outputs=/cross_attn.3/Gather_13_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_14' axis=0, outputs=/cross_attn.3/Gather_14_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_15' axis=0, outputs=/cross_attn.3/Gather_15_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_16' axis=0, outputs=/cross_attn.3/Gather_16_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_17' axis=0, outputs=/cross_attn.3/Gather_17_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_18' axis=0, outputs=/cross_attn.3/Gather_18_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.3/Gather_19' axis=0, outputs=/cross_attn.3/Gather_19_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather' axis=0, outputs=/self_attn.4/Gather_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_1' axis=0, outputs=/self_attn.4/Gather_1_output_0
-[ WARN:0@8.547] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_2' axis=0, outputs=/self_attn.4/Gather_2_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_3' axis=4, outputs=/self_attn.4/Gather_3_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_4' axis=4, outputs=/self_attn.4/Gather_4_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_5' axis=4, outputs=/self_attn.4/Gather_5_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_6' axis=0, outputs=/self_attn.4/Gather_6_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_7' axis=0, outputs=/self_attn.4/Gather_7_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_8' axis=0, outputs=/self_attn.4/Gather_8_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_9' axis=0, outputs=/self_attn.4/Gather_9_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_10' axis=0, outputs=/self_attn.4/Gather_10_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_11' axis=0, outputs=/self_attn.4/Gather_11_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_12' axis=0, outputs=/self_attn.4/Gather_12_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_13' axis=0, outputs=/self_attn.4/Gather_13_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_14' axis=0, outputs=/self_attn.4/Gather_14_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_15' axis=0, outputs=/self_attn.4/Gather_15_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_16' axis=0, outputs=/self_attn.4/Gather_16_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_17' axis=0, outputs=/self_attn.4/Gather_17_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_18' axis=0, outputs=/self_attn.4/Gather_18_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_19' axis=0, outputs=/self_attn.4/Gather_19_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_20' axis=0, outputs=/self_attn.4/Gather_20_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_21' axis=0, outputs=/self_attn.4/Gather_21_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_22' axis=0, outputs=/self_attn.4/Gather_22_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_23' axis=0, outputs=/self_attn.4/Gather_23_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_24' axis=0, outputs=/self_attn.4/Gather_24_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_25' axis=0, outputs=/self_attn.4/Gather_25_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_26' axis=0, outputs=/self_attn.4/Gather_26_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_27' axis=0, outputs=/self_attn.4/Gather_27_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_28' axis=0, outputs=/self_attn.4/Gather_28_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_29' axis=0, outputs=/self_attn.4/Gather_29_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_30' axis=0, outputs=/self_attn.4/Gather_30_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_31' axis=4, outputs=/self_attn.4/Gather_31_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_32' axis=4, outputs=/self_attn.4/Gather_32_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_33' axis=4, outputs=/self_attn.4/Gather_33_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_34' axis=0, outputs=/self_attn.4/Gather_34_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_35' axis=0, outputs=/self_attn.4/Gather_35_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_36' axis=0, outputs=/self_attn.4/Gather_36_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_37' axis=0, outputs=/self_attn.4/Gather_37_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_38' axis=0, outputs=/self_attn.4/Gather_38_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_39' axis=0, outputs=/self_attn.4/Gather_39_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_40' axis=0, outputs=/self_attn.4/Gather_40_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_41' axis=0, outputs=/self_attn.4/Gather_41_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_42' axis=0, outputs=/self_attn.4/Gather_42_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_43' axis=0, outputs=/self_attn.4/Gather_43_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_44' axis=0, outputs=/self_attn.4/Gather_44_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_45' axis=0, outputs=/self_attn.4/Gather_45_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_46' axis=0, outputs=/self_attn.4/Gather_46_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_47' axis=0, outputs=/self_attn.4/Gather_47_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_48' axis=0, outputs=/self_attn.4/Gather_48_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_49' axis=0, outputs=/self_attn.4/Gather_49_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_50' axis=0, outputs=/self_attn.4/Gather_50_output_0
-[ WARN:0@8.548] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_51' axis=0, outputs=/self_attn.4/Gather_51_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_52' axis=0, outputs=/self_attn.4/Gather_52_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_53' axis=0, outputs=/self_attn.4/Gather_53_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_54' axis=0, outputs=/self_attn.4/Gather_54_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.4/Gather_55' axis=0, outputs=/self_attn.4/Gather_55_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather' axis=0, outputs=/cross_attn.4/Gather_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_1' axis=0, outputs=/cross_attn.4/Gather_1_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_2' axis=0, outputs=/cross_attn.4/Gather_2_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_3' axis=0, outputs=/cross_attn.4/Gather_3_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_4' axis=0, outputs=/cross_attn.4/Gather_4_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_5' axis=0, outputs=/cross_attn.4/Gather_5_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_6' axis=0, outputs=/cross_attn.4/Gather_6_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_7' axis=0, outputs=/cross_attn.4/Gather_7_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_8' axis=0, outputs=/cross_attn.4/Gather_8_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_9' axis=0, outputs=/cross_attn.4/Gather_9_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_10' axis=0, outputs=/cross_attn.4/Gather_10_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_11' axis=0, outputs=/cross_attn.4/Gather_11_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_12' axis=0, outputs=/cross_attn.4/Gather_12_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_13' axis=0, outputs=/cross_attn.4/Gather_13_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_14' axis=0, outputs=/cross_attn.4/Gather_14_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_15' axis=0, outputs=/cross_attn.4/Gather_15_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_16' axis=0, outputs=/cross_attn.4/Gather_16_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_17' axis=0, outputs=/cross_attn.4/Gather_17_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_18' axis=0, outputs=/cross_attn.4/Gather_18_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.4/Gather_19' axis=0, outputs=/cross_attn.4/Gather_19_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather' axis=0, outputs=/self_attn.5/Gather_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_1' axis=0, outputs=/self_attn.5/Gather_1_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_2' axis=0, outputs=/self_attn.5/Gather_2_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_3' axis=4, outputs=/self_attn.5/Gather_3_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_4' axis=4, outputs=/self_attn.5/Gather_4_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_5' axis=4, outputs=/self_attn.5/Gather_5_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_6' axis=0, outputs=/self_attn.5/Gather_6_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_7' axis=0, outputs=/self_attn.5/Gather_7_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_8' axis=0, outputs=/self_attn.5/Gather_8_output_0
-[ WARN:0@8.549] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_9' axis=0, outputs=/self_attn.5/Gather_9_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_10' axis=0, outputs=/self_attn.5/Gather_10_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_11' axis=0, outputs=/self_attn.5/Gather_11_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_12' axis=0, outputs=/self_attn.5/Gather_12_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_13' axis=0, outputs=/self_attn.5/Gather_13_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_14' axis=0, outputs=/self_attn.5/Gather_14_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_15' axis=0, outputs=/self_attn.5/Gather_15_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_16' axis=0, outputs=/self_attn.5/Gather_16_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_17' axis=0, outputs=/self_attn.5/Gather_17_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_18' axis=0, outputs=/self_attn.5/Gather_18_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_19' axis=0, outputs=/self_attn.5/Gather_19_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_20' axis=0, outputs=/self_attn.5/Gather_20_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_21' axis=0, outputs=/self_attn.5/Gather_21_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_22' axis=0, outputs=/self_attn.5/Gather_22_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_23' axis=0, outputs=/self_attn.5/Gather_23_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_24' axis=0, outputs=/self_attn.5/Gather_24_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_25' axis=0, outputs=/self_attn.5/Gather_25_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_26' axis=0, outputs=/self_attn.5/Gather_26_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_27' axis=0, outputs=/self_attn.5/Gather_27_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_28' axis=0, outputs=/self_attn.5/Gather_28_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_29' axis=0, outputs=/self_attn.5/Gather_29_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_30' axis=0, outputs=/self_attn.5/Gather_30_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_31' axis=4, outputs=/self_attn.5/Gather_31_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_32' axis=4, outputs=/self_attn.5/Gather_32_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_33' axis=4, outputs=/self_attn.5/Gather_33_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_34' axis=0, outputs=/self_attn.5/Gather_34_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_35' axis=0, outputs=/self_attn.5/Gather_35_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_36' axis=0, outputs=/self_attn.5/Gather_36_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_37' axis=0, outputs=/self_attn.5/Gather_37_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_38' axis=0, outputs=/self_attn.5/Gather_38_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_39' axis=0, outputs=/self_attn.5/Gather_39_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_40' axis=0, outputs=/self_attn.5/Gather_40_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_41' axis=0, outputs=/self_attn.5/Gather_41_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_42' axis=0, outputs=/self_attn.5/Gather_42_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_43' axis=0, outputs=/self_attn.5/Gather_43_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_44' axis=0, outputs=/self_attn.5/Gather_44_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_45' axis=0, outputs=/self_attn.5/Gather_45_output_0
-[ WARN:0@8.550] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_46' axis=0, outputs=/self_attn.5/Gather_46_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_47' axis=0, outputs=/self_attn.5/Gather_47_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_48' axis=0, outputs=/self_attn.5/Gather_48_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_49' axis=0, outputs=/self_attn.5/Gather_49_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_50' axis=0, outputs=/self_attn.5/Gather_50_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_51' axis=0, outputs=/self_attn.5/Gather_51_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_52' axis=0, outputs=/self_attn.5/Gather_52_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_53' axis=0, outputs=/self_attn.5/Gather_53_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_54' axis=0, outputs=/self_attn.5/Gather_54_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.5/Gather_55' axis=0, outputs=/self_attn.5/Gather_55_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather' axis=0, outputs=/cross_attn.5/Gather_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_1' axis=0, outputs=/cross_attn.5/Gather_1_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_2' axis=0, outputs=/cross_attn.5/Gather_2_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_3' axis=0, outputs=/cross_attn.5/Gather_3_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_4' axis=0, outputs=/cross_attn.5/Gather_4_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_5' axis=0, outputs=/cross_attn.5/Gather_5_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_6' axis=0, outputs=/cross_attn.5/Gather_6_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_7' axis=0, outputs=/cross_attn.5/Gather_7_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_8' axis=0, outputs=/cross_attn.5/Gather_8_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_9' axis=0, outputs=/cross_attn.5/Gather_9_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_10' axis=0, outputs=/cross_attn.5/Gather_10_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_11' axis=0, outputs=/cross_attn.5/Gather_11_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_12' axis=0, outputs=/cross_attn.5/Gather_12_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_13' axis=0, outputs=/cross_attn.5/Gather_13_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_14' axis=0, outputs=/cross_attn.5/Gather_14_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_15' axis=0, outputs=/cross_attn.5/Gather_15_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_16' axis=0, outputs=/cross_attn.5/Gather_16_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_17' axis=0, outputs=/cross_attn.5/Gather_17_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_18' axis=0, outputs=/cross_attn.5/Gather_18_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.5/Gather_19' axis=0, outputs=/cross_attn.5/Gather_19_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather' axis=0, outputs=/self_attn.6/Gather_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_1' axis=0, outputs=/self_attn.6/Gather_1_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_2' axis=0, outputs=/self_attn.6/Gather_2_output_0
-[ WARN:0@8.551] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_3' axis=4, outputs=/self_attn.6/Gather_3_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_4' axis=4, outputs=/self_attn.6/Gather_4_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_5' axis=4, outputs=/self_attn.6/Gather_5_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_6' axis=0, outputs=/self_attn.6/Gather_6_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_7' axis=0, outputs=/self_attn.6/Gather_7_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_8' axis=0, outputs=/self_attn.6/Gather_8_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_9' axis=0, outputs=/self_attn.6/Gather_9_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_10' axis=0, outputs=/self_attn.6/Gather_10_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_11' axis=0, outputs=/self_attn.6/Gather_11_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_12' axis=0, outputs=/self_attn.6/Gather_12_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_13' axis=0, outputs=/self_attn.6/Gather_13_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_14' axis=0, outputs=/self_attn.6/Gather_14_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_15' axis=0, outputs=/self_attn.6/Gather_15_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_16' axis=0, outputs=/self_attn.6/Gather_16_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_17' axis=0, outputs=/self_attn.6/Gather_17_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_18' axis=0, outputs=/self_attn.6/Gather_18_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_19' axis=0, outputs=/self_attn.6/Gather_19_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_20' axis=0, outputs=/self_attn.6/Gather_20_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_21' axis=0, outputs=/self_attn.6/Gather_21_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_22' axis=0, outputs=/self_attn.6/Gather_22_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_23' axis=0, outputs=/self_attn.6/Gather_23_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_24' axis=0, outputs=/self_attn.6/Gather_24_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_25' axis=0, outputs=/self_attn.6/Gather_25_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_26' axis=0, outputs=/self_attn.6/Gather_26_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_27' axis=0, outputs=/self_attn.6/Gather_27_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_28' axis=0, outputs=/self_attn.6/Gather_28_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_29' axis=0, outputs=/self_attn.6/Gather_29_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_30' axis=0, outputs=/self_attn.6/Gather_30_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_31' axis=4, outputs=/self_attn.6/Gather_31_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_32' axis=4, outputs=/self_attn.6/Gather_32_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_33' axis=4, outputs=/self_attn.6/Gather_33_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_34' axis=0, outputs=/self_attn.6/Gather_34_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_35' axis=0, outputs=/self_attn.6/Gather_35_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_36' axis=0, outputs=/self_attn.6/Gather_36_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_37' axis=0, outputs=/self_attn.6/Gather_37_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_38' axis=0, outputs=/self_attn.6/Gather_38_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_39' axis=0, outputs=/self_attn.6/Gather_39_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_40' axis=0, outputs=/self_attn.6/Gather_40_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_41' axis=0, outputs=/self_attn.6/Gather_41_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_42' axis=0, outputs=/self_attn.6/Gather_42_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_43' axis=0, outputs=/self_attn.6/Gather_43_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_44' axis=0, outputs=/self_attn.6/Gather_44_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_45' axis=0, outputs=/self_attn.6/Gather_45_output_0
-[ WARN:0@8.552] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_46' axis=0, outputs=/self_attn.6/Gather_46_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_47' axis=0, outputs=/self_attn.6/Gather_47_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_48' axis=0, outputs=/self_attn.6/Gather_48_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_49' axis=0, outputs=/self_attn.6/Gather_49_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_50' axis=0, outputs=/self_attn.6/Gather_50_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_51' axis=0, outputs=/self_attn.6/Gather_51_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_52' axis=0, outputs=/self_attn.6/Gather_52_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_53' axis=0, outputs=/self_attn.6/Gather_53_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_54' axis=0, outputs=/self_attn.6/Gather_54_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.6/Gather_55' axis=0, outputs=/self_attn.6/Gather_55_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather' axis=0, outputs=/cross_attn.6/Gather_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_1' axis=0, outputs=/cross_attn.6/Gather_1_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_2' axis=0, outputs=/cross_attn.6/Gather_2_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_3' axis=0, outputs=/cross_attn.6/Gather_3_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_4' axis=0, outputs=/cross_attn.6/Gather_4_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_5' axis=0, outputs=/cross_attn.6/Gather_5_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_6' axis=0, outputs=/cross_attn.6/Gather_6_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_7' axis=0, outputs=/cross_attn.6/Gather_7_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_8' axis=0, outputs=/cross_attn.6/Gather_8_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_9' axis=0, outputs=/cross_attn.6/Gather_9_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_10' axis=0, outputs=/cross_attn.6/Gather_10_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_11' axis=0, outputs=/cross_attn.6/Gather_11_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_12' axis=0, outputs=/cross_attn.6/Gather_12_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_13' axis=0, outputs=/cross_attn.6/Gather_13_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_14' axis=0, outputs=/cross_attn.6/Gather_14_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_15' axis=0, outputs=/cross_attn.6/Gather_15_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_16' axis=0, outputs=/cross_attn.6/Gather_16_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_17' axis=0, outputs=/cross_attn.6/Gather_17_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_18' axis=0, outputs=/cross_attn.6/Gather_18_output_0
-[ WARN:0@8.553] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.6/Gather_19' axis=0, outputs=/cross_attn.6/Gather_19_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather' axis=0, outputs=/self_attn.7/Gather_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_1' axis=0, outputs=/self_attn.7/Gather_1_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_2' axis=0, outputs=/self_attn.7/Gather_2_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_3' axis=4, outputs=/self_attn.7/Gather_3_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_4' axis=4, outputs=/self_attn.7/Gather_4_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_5' axis=4, outputs=/self_attn.7/Gather_5_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_6' axis=0, outputs=/self_attn.7/Gather_6_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_7' axis=0, outputs=/self_attn.7/Gather_7_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_8' axis=0, outputs=/self_attn.7/Gather_8_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_9' axis=0, outputs=/self_attn.7/Gather_9_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_10' axis=0, outputs=/self_attn.7/Gather_10_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_11' axis=0, outputs=/self_attn.7/Gather_11_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_12' axis=0, outputs=/self_attn.7/Gather_12_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_13' axis=0, outputs=/self_attn.7/Gather_13_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_14' axis=0, outputs=/self_attn.7/Gather_14_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_15' axis=0, outputs=/self_attn.7/Gather_15_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_16' axis=0, outputs=/self_attn.7/Gather_16_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_17' axis=0, outputs=/self_attn.7/Gather_17_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_18' axis=0, outputs=/self_attn.7/Gather_18_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_19' axis=0, outputs=/self_attn.7/Gather_19_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_20' axis=0, outputs=/self_attn.7/Gather_20_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_21' axis=0, outputs=/self_attn.7/Gather_21_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_22' axis=0, outputs=/self_attn.7/Gather_22_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_23' axis=0, outputs=/self_attn.7/Gather_23_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_24' axis=0, outputs=/self_attn.7/Gather_24_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_25' axis=0, outputs=/self_attn.7/Gather_25_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_26' axis=0, outputs=/self_attn.7/Gather_26_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_27' axis=0, outputs=/self_attn.7/Gather_27_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_28' axis=0, outputs=/self_attn.7/Gather_28_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_29' axis=0, outputs=/self_attn.7/Gather_29_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_30' axis=0, outputs=/self_attn.7/Gather_30_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_31' axis=4, outputs=/self_attn.7/Gather_31_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_32' axis=4, outputs=/self_attn.7/Gather_32_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_33' axis=4, outputs=/self_attn.7/Gather_33_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_34' axis=0, outputs=/self_attn.7/Gather_34_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_35' axis=0, outputs=/self_attn.7/Gather_35_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_36' axis=0, outputs=/self_attn.7/Gather_36_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_37' axis=0, outputs=/self_attn.7/Gather_37_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_38' axis=0, outputs=/self_attn.7/Gather_38_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_39' axis=0, outputs=/self_attn.7/Gather_39_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_40' axis=0, outputs=/self_attn.7/Gather_40_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_41' axis=0, outputs=/self_attn.7/Gather_41_output_0
-[ WARN:0@8.554] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_42' axis=0, outputs=/self_attn.7/Gather_42_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_43' axis=0, outputs=/self_attn.7/Gather_43_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_44' axis=0, outputs=/self_attn.7/Gather_44_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_45' axis=0, outputs=/self_attn.7/Gather_45_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_46' axis=0, outputs=/self_attn.7/Gather_46_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_47' axis=0, outputs=/self_attn.7/Gather_47_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_48' axis=0, outputs=/self_attn.7/Gather_48_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_49' axis=0, outputs=/self_attn.7/Gather_49_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_50' axis=0, outputs=/self_attn.7/Gather_50_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_51' axis=0, outputs=/self_attn.7/Gather_51_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_52' axis=0, outputs=/self_attn.7/Gather_52_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_53' axis=0, outputs=/self_attn.7/Gather_53_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_54' axis=0, outputs=/self_attn.7/Gather_54_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.7/Gather_55' axis=0, outputs=/self_attn.7/Gather_55_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather' axis=0, outputs=/cross_attn.7/Gather_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_1' axis=0, outputs=/cross_attn.7/Gather_1_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_2' axis=0, outputs=/cross_attn.7/Gather_2_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_3' axis=0, outputs=/cross_attn.7/Gather_3_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_4' axis=0, outputs=/cross_attn.7/Gather_4_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_5' axis=0, outputs=/cross_attn.7/Gather_5_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_6' axis=0, outputs=/cross_attn.7/Gather_6_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_7' axis=0, outputs=/cross_attn.7/Gather_7_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_8' axis=0, outputs=/cross_attn.7/Gather_8_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_9' axis=0, outputs=/cross_attn.7/Gather_9_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_10' axis=0, outputs=/cross_attn.7/Gather_10_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_11' axis=0, outputs=/cross_attn.7/Gather_11_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_12' axis=0, outputs=/cross_attn.7/Gather_12_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_13' axis=0, outputs=/cross_attn.7/Gather_13_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_14' axis=0, outputs=/cross_attn.7/Gather_14_output_0
-[ WARN:0@8.555] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_15' axis=0, outputs=/cross_attn.7/Gather_15_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_16' axis=0, outputs=/cross_attn.7/Gather_16_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_17' axis=0, outputs=/cross_attn.7/Gather_17_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_18' axis=0, outputs=/cross_attn.7/Gather_18_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.7/Gather_19' axis=0, outputs=/cross_attn.7/Gather_19_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather' axis=0, outputs=/self_attn.8/Gather_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_1' axis=0, outputs=/self_attn.8/Gather_1_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_2' axis=0, outputs=/self_attn.8/Gather_2_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_3' axis=4, outputs=/self_attn.8/Gather_3_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_4' axis=4, outputs=/self_attn.8/Gather_4_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_5' axis=4, outputs=/self_attn.8/Gather_5_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_6' axis=0, outputs=/self_attn.8/Gather_6_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_7' axis=0, outputs=/self_attn.8/Gather_7_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_8' axis=0, outputs=/self_attn.8/Gather_8_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_9' axis=0, outputs=/self_attn.8/Gather_9_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_10' axis=0, outputs=/self_attn.8/Gather_10_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_11' axis=0, outputs=/self_attn.8/Gather_11_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_12' axis=0, outputs=/self_attn.8/Gather_12_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_13' axis=0, outputs=/self_attn.8/Gather_13_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_14' axis=0, outputs=/self_attn.8/Gather_14_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_15' axis=0, outputs=/self_attn.8/Gather_15_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_16' axis=0, outputs=/self_attn.8/Gather_16_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_17' axis=0, outputs=/self_attn.8/Gather_17_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_18' axis=0, outputs=/self_attn.8/Gather_18_output_0
-[ WARN:0@8.557] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_19' axis=0, outputs=/self_attn.8/Gather_19_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_20' axis=0, outputs=/self_attn.8/Gather_20_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_21' axis=0, outputs=/self_attn.8/Gather_21_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_22' axis=0, outputs=/self_attn.8/Gather_22_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_23' axis=0, outputs=/self_attn.8/Gather_23_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_24' axis=0, outputs=/self_attn.8/Gather_24_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_25' axis=0, outputs=/self_attn.8/Gather_25_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_26' axis=0, outputs=/self_attn.8/Gather_26_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_27' axis=0, outputs=/self_attn.8/Gather_27_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_28' axis=0, outputs=/self_attn.8/Gather_28_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_29' axis=0, outputs=/self_attn.8/Gather_29_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_30' axis=0, outputs=/self_attn.8/Gather_30_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_31' axis=4, outputs=/self_attn.8/Gather_31_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_32' axis=4, outputs=/self_attn.8/Gather_32_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_33' axis=4, outputs=/self_attn.8/Gather_33_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_34' axis=0, outputs=/self_attn.8/Gather_34_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_35' axis=0, outputs=/self_attn.8/Gather_35_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_36' axis=0, outputs=/self_attn.8/Gather_36_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_37' axis=0, outputs=/self_attn.8/Gather_37_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_38' axis=0, outputs=/self_attn.8/Gather_38_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_39' axis=0, outputs=/self_attn.8/Gather_39_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_40' axis=0, outputs=/self_attn.8/Gather_40_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_41' axis=0, outputs=/self_attn.8/Gather_41_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_42' axis=0, outputs=/self_attn.8/Gather_42_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_43' axis=0, outputs=/self_attn.8/Gather_43_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_44' axis=0, outputs=/self_attn.8/Gather_44_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_45' axis=0, outputs=/self_attn.8/Gather_45_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_46' axis=0, outputs=/self_attn.8/Gather_46_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_47' axis=0, outputs=/self_attn.8/Gather_47_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_48' axis=0, outputs=/self_attn.8/Gather_48_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_49' axis=0, outputs=/self_attn.8/Gather_49_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_50' axis=0, outputs=/self_attn.8/Gather_50_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_51' axis=0, outputs=/self_attn.8/Gather_51_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_52' axis=0, outputs=/self_attn.8/Gather_52_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_53' axis=0, outputs=/self_attn.8/Gather_53_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_54' axis=0, outputs=/self_attn.8/Gather_54_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/self_attn.8/Gather_55' axis=0, outputs=/self_attn.8/Gather_55_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather' axis=0, outputs=/cross_attn.8/Gather_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_1' axis=0, outputs=/cross_attn.8/Gather_1_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_2' axis=0, outputs=/cross_attn.8/Gather_2_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_3' axis=0, outputs=/cross_attn.8/Gather_3_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_4' axis=0, outputs=/cross_attn.8/Gather_4_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_5' axis=0, outputs=/cross_attn.8/Gather_5_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_6' axis=0, outputs=/cross_attn.8/Gather_6_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_7' axis=0, outputs=/cross_attn.8/Gather_7_output_0
-[ WARN:0@8.558] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_8' axis=0, outputs=/cross_attn.8/Gather_8_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_9' axis=0, outputs=/cross_attn.8/Gather_9_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_10' axis=0, outputs=/cross_attn.8/Gather_10_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_11' axis=0, outputs=/cross_attn.8/Gather_11_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_12' axis=0, outputs=/cross_attn.8/Gather_12_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_13' axis=0, outputs=/cross_attn.8/Gather_13_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_14' axis=0, outputs=/cross_attn.8/Gather_14_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_15' axis=0, outputs=/cross_attn.8/Gather_15_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_16' axis=0, outputs=/cross_attn.8/Gather_16_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_17' axis=0, outputs=/cross_attn.8/Gather_17_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_18' axis=0, outputs=/cross_attn.8/Gather_18_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/cross_attn.8/Gather_19' axis=0, outputs=/cross_attn.8/Gather_19_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/log_assignment.8/Cast' axis=0, outputs=/log_assignment.8/Cast_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/log_assignment.8/Gather_1' axis=0, outputs=/log_assignment.8/Gather_1_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/log_assignment.8/Gather_2' axis=0, outputs=/log_assignment.8/Gather_2_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/log_assignment.8/Gather_3' axis=0, outputs=/log_assignment.8/Gather_3_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/log_assignment.8/Cast_1' axis=0, outputs=/log_assignment.8/Cast_1_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/log_assignment.8/Cast_2' axis=0, outputs=/log_assignment.8/Cast_2_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/log_assignment.8/Cast_3' axis=0, outputs=/log_assignment.8/Cast_3_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/log_assignment.8/Gather_7' axis=2, outputs=/log_assignment.8/Gather_7_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/log_assignment.8/Cast_4' axis=0, outputs=/log_assignment.8/Cast_4_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/log_assignment.8/Cast_5' axis=0, outputs=/log_assignment.8/Cast_5_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/log_assignment.8/Gather_10' axis=1, outputs=/log_assignment.8/Gather_10_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/log_assignment.8/Cast_6' axis=0, outputs=/log_assignment.8/Cast_6_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/log_assignment.8/Cast_7' axis=0, outputs=/log_assignment.8/Cast_7_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/Cast' axis=0, outputs=/Cast_output_0
-[ WARN:0@8.559] global onnx_importer2.cpp:1509 parseGather DNN/ONNX: Gather node '/Cast_1' axis=0, outputs=/Cast_1_output_0
 Model loaded successfully
 Dummy data generation complete
 Running LightGlue inference
-terminate called after throwing an instance of 'cv::Exception'
-  what():  OpenCV(5.0.0-pre) /home/christylinux/opencv_build/opencv/modules/dnn/src/layers/nary_eltwise_layers.cpp:409: error: (-2:Unspecified error) in function 'virtual void cv::dnn::NaryEltwiseLayerImpl::getTypes(const std::vector<int>&, int, int, std::vector<int>&, std::vector<int>&) const'
-> All inputs should have equal types (expected: 'inputs[0] == input'), where
->     'inputs[0]' is 5 (CV_32FC1)
-> must be equal to
->     'input' is 11 (CV_64SC1)
+[0;93m2026-04-14 21:43:58.544811973 [W:onnxruntime:OpenCV_DNN_ORT, device_discovery.cc:211 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:91 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+Inference complete
+Output matches0 shape 500
+Output mscores0 shape 500
+Found 78 valid matches
 
+--- First 10 match results ---
+i=0 -> match=0, score=0.115355
+i=1 -> match=0, score=0.0324909
+i=2 -> match=-nan, score=0.00324243
+i=3 -> match=-nan, score=0.303503
+i=4 -> match=-nan, score=0.00459663
+i=5 -> match=-nan, score=0.00190767
+i=6 -> match=4.2039e-45, score=0.00289949
+i=7 -> match=0, score=0.0331645
+i=8 -> match=-nan, score=0.0172287
+i=9 -> match=-nan, score=0.000395833
