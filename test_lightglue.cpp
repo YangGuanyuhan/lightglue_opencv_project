@@ -1,5 +1,6 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/dnn.hpp>
+#include <cstdlib>
 #include <iostream>
 #include <random>
 #include <filesystem>
@@ -16,6 +17,43 @@ const int NUM_KPTS_1 = 500;
 
 const int IMG_H0 = 480, IMG_W0 = 640;
 const int IMG_H1 = 480, IMG_W1 = 640;
+
+const int LG_ENGINE = dnn::ENGINE_NEW;
+
+static const char* engine_to_string(int engine)
+{
+    if (engine == dnn::ENGINE_NEW)
+        return "ENGINE_NEW";
+    return "UNKNOWN_ENGINE";
+}
+
+static void print_runtime_info()
+{
+    std::filesystem::path modelPath(LG_MODEL_PATH);
+    std::error_code ec;
+    std::filesystem::path absModelPath = std::filesystem::absolute(modelPath, ec);
+
+    cout << "================ Runtime Info ================" << endl;
+    cout << "Model (configured path): " << LG_MODEL_PATH << endl;
+    cout << "Model (file name): " << modelPath.filename().string() << endl;
+    if (!ec)
+        cout << "Model (absolute path): " << absModelPath.string() << endl;
+
+    cout << "OpenCV version string: " << CV_VERSION << endl;
+    cout << "OpenCV major/minor/revision: "
+         << CV_VERSION_MAJOR << "."
+         << CV_VERSION_MINOR << "."
+         << CV_VERSION_REVISION << endl;
+    cout << "OpenCV detailed build information:" << endl;
+    cout << cv::getBuildInformation() << endl;
+
+    cout << "DNN inference engine: " << engine_to_string(LG_ENGINE)
+         << " (enum=" << static_cast<int>(LG_ENGINE) << ")" << endl;
+
+    const char* traceEnv = std::getenv("DNN_TRACE_ALL");
+    cout << "DNN_TRACE_ALL=" << (traceEnv ? traceEnv : "<unset>") << endl;
+    cout << "==============================================" << endl;
+}
 
 // ------------------------------
 // Normalize keypoints N 2
@@ -152,8 +190,7 @@ void run_lightglue(
 // ------------------------------
 int main()
 {
-
-    cout << "OpenCV version " << CV_VERSION << endl;
+    print_runtime_info();
 
     if (!std::filesystem::exists(LG_MODEL_PATH))
     {
@@ -163,7 +200,7 @@ int main()
 
     // Load ONNX
     cout << "Loading LightGlue model " << LG_MODEL_PATH << endl;
-    dnn::Net net = dnn::readNetFromONNX(LG_MODEL_PATH,dnn::ENGINE_NEW);
+    dnn::Net net = dnn::readNetFromONNX(LG_MODEL_PATH, LG_ENGINE);
     net.enableWinograd(false);// Disable Winograd optimization to avoid potential issues
     cout << "Model loaded successfully" << endl;
 
