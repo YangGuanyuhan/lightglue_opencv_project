@@ -1,5 +1,6 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/dnn.hpp>
+#include <cstdint>
 #include <cstdlib>
 #include <iostream>
 #include <random>
@@ -133,22 +134,42 @@ void run_matcher_standard(
         print_mat_shape(outNames[i], outs[i]);
 
     // Parse matches0: shape [1, N] with -1 sentinel for unmatched
+    // DISK LightGlue outputs int64 matches type; read via raw pointer
     Mat matches0 = outs[0].reshape(1, outs[0].total());
     Mat mscores0 = outs[1].reshape(1, outs[1].total());
 
     int valid = 0;
+    int match_type = matches0.type();
+    int64_t* match_ptr = nullptr;
+    int32_t* match_ptr_32 = nullptr;
+    float* match_ptr_f = nullptr;
+
+    if (match_type == 11 || match_type == CV_64S || match_type == CV_64F)
+        match_ptr = matches0.ptr<int64_t>(0);
+    else if (match_type == CV_32S)
+        match_ptr_32 = matches0.ptr<int32_t>(0);
+    else
+        match_ptr_f = matches0.ptr<float>(0);
+
     for (int i = 0; i < matches0.total(); i++)
     {
-        float m = matches0.at<float>(i);
-        if (m > -0.5f) valid++;
+        double m;
+        if (match_ptr)       m = (double)match_ptr[i];
+        else if (match_ptr_32) m = (double)match_ptr_32[i];
+        else                 m = (double)match_ptr_f[i];
+        if (m > -0.5) valid++;
     }
     cout << "Found " << valid << " valid matches (out of " << matches0.total() << ")" << endl;
 
     cout << "\n--- First 10 match results ---" << endl;
     for (int i = 0; i < 10 && i < matches0.total(); i++)
     {
+        double m;
+        if (match_ptr)       m = (double)match_ptr[i];
+        else if (match_ptr_32) m = (double)match_ptr_32[i];
+        else                 m = (double)match_ptr_f[i];
         cout << "i=" << i
-             << " -> match=" << matches0.at<float>(i)
+             << " -> match=" << m
              << ", score=" << mscores0.at<float>(i) << endl;
     }
 }
@@ -191,36 +212,43 @@ void run_matcher_fused(
     Mat matches0 = outs[0];
     Mat mscores0 = outs[1];
 
-    // Handle both [1, M, 2] and [M, 2] shapes
+    // Handle both [1, M, 2] and [M, 2] shapes, also int64 vs float types
     int M, pair_stride;
-    const float* match_data;
-    const float* score_data;
+    int match_type = matches0.type();
+    bool is_int64 = (match_type == 11);
 
     if (matches0.dims == 3)
     {
-        // Shape [1, M, 2]
         M = matches0.size[1];
         pair_stride = 2;
-        match_data = matches0.ptr<float>(0);
-        score_data = mscores0.ptr<float>(0);
     }
     else
     {
-        // Shape [M, 2]
         M = matches0.size[0];
-        pair_stride = matches0.size[1];  // should be 2
-        match_data = matches0.ptr<float>(0);
-        score_data = mscores0.ptr<float>(0);
+        pair_stride = matches0.size[1];
     }
 
-    cout << "Found " << M << " match pairs" << endl;
+    cout << "Found " << M << " match pairs (type=" << match_type << ")" << endl;
     cout << "\n--- First 10 match pairs ---" << endl;
     for (int i = 0; i < 10 && i < M; i++)
     {
+        double idx0, idx1;
+        if (is_int64)
+        {
+            const int64_t* md = matches0.ptr<int64_t>(0);
+            idx0 = (double)md[i * pair_stride];
+            idx1 = (double)md[i * pair_stride + 1];
+        }
+        else
+        {
+            const float* md = matches0.ptr<float>(0);
+            idx0 = (double)md[i * pair_stride];
+            idx1 = (double)md[i * pair_stride + 1];
+        }
         cout << "i=" << i
-             << " -> (kpt0=" << match_data[i * pair_stride]
-             << ", kpt1=" << match_data[i * pair_stride + 1]
-             << "), score=" << score_data[i] << endl;
+             << " -> (kpt0=" << idx0
+             << ", kpt1=" << idx1
+             << "), score=" << mscores0.at<float>(i) << endl;
     }
 }
 
@@ -234,20 +262,29 @@ void test_model(const string &model_path, bool is_fused)
         return;
     }
 
-    cout << "Loading model..." << endl;
-    dnn::Net net = dnn::readNetFromONNX(model_path, ENGINE);
-    net.enableWinograd(false);
-    cout << "Model loaded successfully" << endl;
+    try
+    {
+        cout << "Loading model..." << endl;
+        dnn::Net net = dnn::readNetFromONNX(model_path, ENGINE);
+        net.enableWinograd(false);
+        cout << "Model loaded successfully" << endl;
 
-    Mat kpts0, desc0, kpts1, desc1;
-    generate_dummy_features(NUM_KPTS_0, IMG_H0, IMG_W0, kpts0, desc0);
-    generate_dummy_features(NUM_KPTS_1, IMG_H1, IMG_W1, kpts1, desc1);
-    cout << "Dummy data generation complete" << endl;
+        Mat kpts0, desc0, kpts1, desc1;
+        generate_dummy_features(NUM_KPTS_0, IMG_H0, IMG_W0, kpts0, desc0);
+        generate_dummy_features(NUM_KPTS_1, IMG_H1, IMG_W1, kpts1, desc1);
+        cout << "Dummy data generation complete" << endl;
 
-    if (is_fused)
-        run_matcher_fused(net, kpts0, desc0, kpts1, desc1, IMG_H0, IMG_W0, IMG_H1, IMG_W1);
-    else
-        run_matcher_standard(net, kpts0, desc0, kpts1, desc1, IMG_H0, IMG_W0, IMG_H1, IMG_W1);
+        if (is_fused)
+            run_matcher_fused(net, kpts0, desc0, kpts1, desc1, IMG_H0, IMG_W0, IMG_H1, IMG_W1);
+        else
+            run_matcher_standard(net, kpts0, desc0, kpts1, desc1, IMG_H0, IMG_W0, IMG_H1, IMG_W1);
+    }
+    catch (const cv::Exception &e)
+    {
+        cerr << "OpenCV exception: " << e.what() << endl;
+        if (is_fused)
+            cerr << "Hint: disk_lightglue_fused.onnx may require ENGINE_ORT (MultiHeadAttention not supported by ENGINE_NEW)." << endl;
+    }
 }
 
 int main()
