@@ -10,6 +10,16 @@ using namespace std;
 const string ALIKED_MODEL_PATH = "../model/aliked-n16rot-top1k-640.onnx";
 const string IMAGE_PATH = "../images/image1.jpg";
 const int TARGET_SIZE = 640;
+const int ENGINE = dnn::ENGINE_NEW;
+
+static const char *engine_to_string(int engine)
+{
+    if (engine == dnn::ENGINE_NEW)
+        return "ENGINE_NEW";
+    if (engine == dnn::ENGINE_ORT)
+        return "ENGINE_ORT";
+    return "UNKNOWN_ENGINE";
+}
 
 void test_aliked()
 {
@@ -27,10 +37,10 @@ void test_aliked()
 
     // 2 Load model
     cout << "Loading ALIKED model from " << ALIKED_MODEL_PATH << " " << endl;
-    dnn::Net net = dnn::readNetFromONNX(ALIKED_MODEL_PATH,dnn::ENGINE_ORT);
+    dnn::Net net = dnn::readNetFromONNX(ALIKED_MODEL_PATH, ENGINE);
     // net.setPreferableBackend(dnn::DNN_BACKEND_OPENCV);
     // net.setPreferableTarget(dnn::DNN_TARGET_CPU);
-    cout << "Model loaded successfully" << endl;
+    cout << "Model loaded successfully in " << engine_to_string(ENGINE)  << endl;
 
     // 3 Read and preprocess image
     Mat img = imread(IMAGE_PATH);

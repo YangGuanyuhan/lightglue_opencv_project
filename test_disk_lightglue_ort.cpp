@@ -173,84 +173,8 @@ void run_matcher_standard(
     }
 }
 
-void run_matcher_fused(
-    dnn::Net &net,
-    const Mat &kpts0, const Mat &desc0,
-    const Mat &kpts1, const Mat &desc1,
-    int H0, int W0, int H1, int W1)
-{
-    cout << "Running LightGlue inference (fused format)" << endl;
 
-    Mat kpts0_norm = normalize_keypoints(kpts0, H0, W0);
-    Mat kpts1_norm = normalize_keypoints(kpts1, H1, W1);
-
-    int shape_kpts0[] = {1, kpts0_norm.rows, 2};
-    Mat blob_kpts0(3, shape_kpts0, CV_32FC1, kpts0_norm.data);
-    int shape_kpts1[] = {1, kpts1_norm.rows, 2};
-    Mat blob_kpts1(3, shape_kpts1, CV_32FC1, kpts1_norm.data);
-
-    int shape_desc0[] = {1, desc0.rows, desc0.cols};
-    Mat blob_desc0(3, shape_desc0, CV_32FC1, desc0.data);
-    int shape_desc1[] = {1, desc1.rows, desc1.cols};
-    Mat blob_desc1(3, shape_desc1, CV_32FC1, desc1.data);
-
-    net.setInput(blob_kpts0, "kpts0");
-    net.setInput(blob_desc0, "desc0");
-    net.setInput(blob_kpts1, "kpts1");
-    net.setInput(blob_desc1, "desc1");
-
-    // Fused model only has matches0 and mscores0
-    vector<string> outNames = {"matches0", "mscores0"};
-    vector<Mat> outs;
-    net.forward(outs, outNames);
-
-    for (size_t i = 0; i < outs.size(); i++)
-        print_mat_shape(outNames[i], outs[i]);
-
-    // Fused format: matches0 is [1, M, 2] or [M, 2] (pairs of indices)
-    Mat matches0 = outs[0];
-    Mat mscores0 = outs[1];
-
-    int M, pair_stride;
-    int match_type = matches0.type();
-    bool is_int64 = (match_type == 11);
-
-    if (matches0.dims == 3)
-    {
-        M = matches0.size[1];
-        pair_stride = 2;
-    }
-    else
-    {
-        M = matches0.size[0];
-        pair_stride = matches0.size[1];
-    }
-
-    cout << "Found " << M << " match pairs (type=" << match_type << ")" << endl;
-    cout << "\n--- First 10 match pairs ---" << endl;
-    for (int i = 0; i < 10 && i < M; i++)
-    {
-        double idx0, idx1;
-        if (is_int64)
-        {
-            const int64_t* md = matches0.ptr<int64_t>(0);
-            idx0 = (double)md[i * pair_stride];
-            idx1 = (double)md[i * pair_stride + 1];
-        }
-        else
-        {
-            const float* md = matches0.ptr<float>(0);
-            idx0 = (double)md[i * pair_stride];
-            idx1 = (double)md[i * pair_stride + 1];
-        }
-        cout << "i=" << i
-             << " -> (kpt0=" << idx0
-             << ", kpt1=" << idx1
-             << "), score=" << mscores0.at<float>(i) << endl;
-    }
-}
-
-void test_model(const string &model_path, bool is_fused)
+void test_model(const string &model_path)
 {
     cout << "\n========== Testing: " << model_path << " ==========" << endl;
 
@@ -272,22 +196,15 @@ void test_model(const string &model_path, bool is_fused)
         generate_dummy_features(NUM_KPTS_1, IMG_H1, IMG_W1, kpts1, desc1);
         cout << "Dummy data generation complete" << endl;
 
-        if (is_fused)
-            run_matcher_fused(net, kpts0, desc0, kpts1, desc1, IMG_H0, IMG_W0, IMG_H1, IMG_W1);
-        else
-            run_matcher_standard(net, kpts0, desc0, kpts1, desc1, IMG_H0, IMG_W0, IMG_H1, IMG_W1);
+        run_matcher_standard(net, kpts0, desc0, kpts1, desc1, IMG_H0, IMG_W0, IMG_H1, IMG_W1);
     }
     catch (const cv::Exception &e)
     {
         cerr << "OpenCV exception: " << e.what() << endl;
-        if (is_fused)
-            cerr << "Hint: disk_lightglue_fused.onnx uses MultiHeadAttention which may require CUDA GPU." << endl;
     }
     catch (const std::exception &e)
     {
         cerr << "Runtime exception: " << e.what() << endl;
-        if (is_fused)
-            cerr << "Hint: disk_lightglue_fused.onnx uses MultiHeadAttention which may require CUDA GPU." << endl;
     }
 }
 
@@ -295,9 +212,8 @@ int main()
 {
     print_runtime_info();
 
-    test_model("../model/disk_lightglue.onnx", false);
-    test_model("../model/disk_lightglue_flash.onnx", false);
-    test_model("../model/disk_lightglue_fused.onnx", true);
+    test_model("../model/disk_lightglue.onnx");
+    test_model("../model/disk_lightglue_flash.onnx");
 
     return 0;
 }
