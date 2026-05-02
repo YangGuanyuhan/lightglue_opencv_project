@@ -14,7 +14,7 @@ const int NUM_KPTS_0 = 500;
 const int NUM_KPTS_1 = 500;
 const int IMG_H0 = 480, IMG_W0 = 640;
 const int IMG_H1 = 480, IMG_W1 = 640;
-const int ENGINE = dnn::ENGINE_NEW;
+const int ENGINE = dnn::ENGINE_ORT;
 
 static const char* engine_to_string(int engine)
 {
@@ -134,7 +134,6 @@ void run_matcher_standard(
         print_mat_shape(outNames[i], outs[i]);
 
     // Parse matches0: shape [1, N] with -1 sentinel for unmatched
-    // DISK LightGlue outputs int64 matches type; read via raw pointer
     Mat matches0 = outs[0].reshape(1, outs[0].total());
     Mat mscores0 = outs[1].reshape(1, outs[1].total());
 
@@ -212,7 +211,6 @@ void run_matcher_fused(
     Mat matches0 = outs[0];
     Mat mscores0 = outs[1];
 
-    // Handle both [1, M, 2] and [M, 2] shapes, also int64 vs float types
     int M, pair_stride;
     int match_type = matches0.type();
     bool is_int64 = (match_type == 11);
@@ -283,7 +281,13 @@ void test_model(const string &model_path, bool is_fused)
     {
         cerr << "OpenCV exception: " << e.what() << endl;
         if (is_fused)
-            cerr << "Hint: disk_lightglue_fused.onnx may require ENGINE_ORT (MultiHeadAttention not supported by ENGINE_NEW)." << endl;
+            cerr << "Hint: disk_lightglue_fused.onnx uses MultiHeadAttention which may require CUDA GPU." << endl;
+    }
+    catch (const std::exception &e)
+    {
+        cerr << "Runtime exception: " << e.what() << endl;
+        if (is_fused)
+            cerr << "Hint: disk_lightglue_fused.onnx uses MultiHeadAttention which may require CUDA GPU." << endl;
     }
 }
 
