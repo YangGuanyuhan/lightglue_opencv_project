@@ -102,29 +102,35 @@ void print_keypoint_samples(const Mat &kpts_mat, int max_samples = 5)
     cout << "  Keypoint samples (x, y):" << endl;
 
     int type = kpts_mat.type();
-    if (type == CV_32F || type == CV_32FC1)
+
+    if (type == CV_32F || type == CV_32FC1 || type == CV_32FC2)
     {
         const float* data = kpts_mat.ptr<float>(0);
         for (int i = 0; i < count; i++)
             cout << "    #" << i << ": (" << data[i * 2] << ", " << data[i * 2 + 1] << ")" << endl;
     }
-    else if (type == CV_64F)
+    else if (type == CV_64F || type == CV_64FC2)
     {
         const double* data = kpts_mat.ptr<double>(0);
         for (int i = 0; i < count; i++)
             cout << "    #" << i << ": (" << data[i * 2] << ", " << data[i * 2 + 1] << ")" << endl;
     }
-    else if (type == CV_32S)
+    else if (type == CV_32S || type == CV_32SC2)
     {
         const int32_t* data = kpts_mat.ptr<int32_t>(0);
         for (int i = 0; i < count; i++)
             cout << "    #" << i << ": (" << data[i * 2] << ", " << data[i * 2 + 1] << ")" << endl;
     }
-    else if ((type & CV_MAT_DEPTH_MASK) == CV_16S)  // type=11 (CV_16SC2)
+    else if (type == 11)  // CV_16SC2: ONNX int16 data padded to 8-byte stride in OpenCV Mat
     {
-        const int16_t* data = kpts_mat.ptr<int16_t>(0);
+        // Workaround: read via int64 pointer to handle internal stride padding
+        const int64_t* data = kpts_mat.ptr<int64_t>(0);
         for (int i = 0; i < count; i++)
-            cout << "    #" << i << ": (" << data[i * 2] << ", " << data[i * 2 + 1] << ")" << endl;
+        {
+            int16_t x = (int16_t)data[i * 2];
+            int16_t y = (int16_t)data[i * 2 + 1];
+            cout << "    #" << i << ": (" << x << ", " << y << ")" << endl;
+        }
     }
     else
     {
