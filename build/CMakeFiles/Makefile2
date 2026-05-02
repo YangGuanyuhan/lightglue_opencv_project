@@ -65,8 +65,13 @@ CMAKE_BINARY_DIR = /home/christylinux/desktop/lightglue_opencv_project/build
 # The main recursive "all" target.
 all: CMakeFiles/example_for_featur_extractor_matcher.dir/all
 all: CMakeFiles/feature_extraction_example.dir/all
+all: CMakeFiles/in_memory_loading_demo.dir/all
 all: CMakeFiles/superpoint_lightglue_only_demo.dir/all
 all: CMakeFiles/test_aliked.dir/all
+all: CMakeFiles/test_disk_extractor_new.dir/all
+all: CMakeFiles/test_disk_extractor_ort.dir/all
+all: CMakeFiles/test_disk_lightglue_new.dir/all
+all: CMakeFiles/test_disk_lightglue_ort.dir/all
 all: CMakeFiles/test_lightglue.dir/all
 all: CMakeFiles/test_xfeat.dir/all
 .PHONY : all
@@ -78,8 +83,13 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/example_for_featur_extractor_matcher.dir/clean
 clean: CMakeFiles/feature_extraction_example.dir/clean
+clean: CMakeFiles/in_memory_loading_demo.dir/clean
 clean: CMakeFiles/superpoint_lightglue_only_demo.dir/clean
 clean: CMakeFiles/test_aliked.dir/clean
+clean: CMakeFiles/test_disk_extractor_new.dir/clean
+clean: CMakeFiles/test_disk_extractor_ort.dir/clean
+clean: CMakeFiles/test_disk_lightglue_new.dir/clean
+clean: CMakeFiles/test_disk_lightglue_ort.dir/clean
 clean: CMakeFiles/test_lightglue.dir/clean
 clean: CMakeFiles/test_xfeat.dir/clean
 .PHONY : clean
@@ -137,13 +147,39 @@ CMakeFiles/feature_extraction_example.dir/clean:
 .PHONY : CMakeFiles/feature_extraction_example.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/in_memory_loading_demo.dir
+
+# All Build rule for target.
+CMakeFiles/in_memory_loading_demo.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/in_memory_loading_demo.dir/build.make CMakeFiles/in_memory_loading_demo.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/in_memory_loading_demo.dir/build.make CMakeFiles/in_memory_loading_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles --progress-num=5,6 "Built target in_memory_loading_demo"
+.PHONY : CMakeFiles/in_memory_loading_demo.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/in_memory_loading_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/in_memory_loading_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles 0
+.PHONY : CMakeFiles/in_memory_loading_demo.dir/rule
+
+# Convenience name for target.
+in_memory_loading_demo: CMakeFiles/in_memory_loading_demo.dir/rule
+.PHONY : in_memory_loading_demo
+
+# clean rule for target.
+CMakeFiles/in_memory_loading_demo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/in_memory_loading_demo.dir/build.make CMakeFiles/in_memory_loading_demo.dir/clean
+.PHONY : CMakeFiles/in_memory_loading_demo.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/superpoint_lightglue_only_demo.dir
 
 # All Build rule for target.
 CMakeFiles/superpoint_lightglue_only_demo.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/superpoint_lightglue_only_demo.dir/build.make CMakeFiles/superpoint_lightglue_only_demo.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/superpoint_lightglue_only_demo.dir/build.make CMakeFiles/superpoint_lightglue_only_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles --progress-num=5,6 "Built target superpoint_lightglue_only_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles --progress-num=7,8 "Built target superpoint_lightglue_only_demo"
 .PHONY : CMakeFiles/superpoint_lightglue_only_demo.dir/all
 
 # Build rule for subdir invocation for target.
@@ -169,7 +205,7 @@ CMakeFiles/superpoint_lightglue_only_demo.dir/clean:
 CMakeFiles/test_aliked.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles --progress-num=7,8 "Built target test_aliked"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles --progress-num=9,10 "Built target test_aliked"
 .PHONY : CMakeFiles/test_aliked.dir/all
 
 # Build rule for subdir invocation for target.
@@ -189,13 +225,117 @@ CMakeFiles/test_aliked.dir/clean:
 .PHONY : CMakeFiles/test_aliked.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/test_disk_extractor_new.dir
+
+# All Build rule for target.
+CMakeFiles/test_disk_extractor_new.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_new.dir/build.make CMakeFiles/test_disk_extractor_new.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_new.dir/build.make CMakeFiles/test_disk_extractor_new.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles --progress-num=11,12 "Built target test_disk_extractor_new"
+.PHONY : CMakeFiles/test_disk_extractor_new.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_disk_extractor_new.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_disk_extractor_new.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_disk_extractor_new.dir/rule
+
+# Convenience name for target.
+test_disk_extractor_new: CMakeFiles/test_disk_extractor_new.dir/rule
+.PHONY : test_disk_extractor_new
+
+# clean rule for target.
+CMakeFiles/test_disk_extractor_new.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_new.dir/build.make CMakeFiles/test_disk_extractor_new.dir/clean
+.PHONY : CMakeFiles/test_disk_extractor_new.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_disk_extractor_ort.dir
+
+# All Build rule for target.
+CMakeFiles/test_disk_extractor_ort.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_ort.dir/build.make CMakeFiles/test_disk_extractor_ort.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_ort.dir/build.make CMakeFiles/test_disk_extractor_ort.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles --progress-num=13,14 "Built target test_disk_extractor_ort"
+.PHONY : CMakeFiles/test_disk_extractor_ort.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_disk_extractor_ort.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_disk_extractor_ort.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_disk_extractor_ort.dir/rule
+
+# Convenience name for target.
+test_disk_extractor_ort: CMakeFiles/test_disk_extractor_ort.dir/rule
+.PHONY : test_disk_extractor_ort
+
+# clean rule for target.
+CMakeFiles/test_disk_extractor_ort.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_ort.dir/build.make CMakeFiles/test_disk_extractor_ort.dir/clean
+.PHONY : CMakeFiles/test_disk_extractor_ort.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_disk_lightglue_new.dir
+
+# All Build rule for target.
+CMakeFiles/test_disk_lightglue_new.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_new.dir/build.make CMakeFiles/test_disk_lightglue_new.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_new.dir/build.make CMakeFiles/test_disk_lightglue_new.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles --progress-num=15,16 "Built target test_disk_lightglue_new"
+.PHONY : CMakeFiles/test_disk_lightglue_new.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_disk_lightglue_new.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_disk_lightglue_new.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_disk_lightglue_new.dir/rule
+
+# Convenience name for target.
+test_disk_lightglue_new: CMakeFiles/test_disk_lightglue_new.dir/rule
+.PHONY : test_disk_lightglue_new
+
+# clean rule for target.
+CMakeFiles/test_disk_lightglue_new.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_new.dir/build.make CMakeFiles/test_disk_lightglue_new.dir/clean
+.PHONY : CMakeFiles/test_disk_lightglue_new.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_disk_lightglue_ort.dir
+
+# All Build rule for target.
+CMakeFiles/test_disk_lightglue_ort.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_ort.dir/build.make CMakeFiles/test_disk_lightglue_ort.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_ort.dir/build.make CMakeFiles/test_disk_lightglue_ort.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles --progress-num=17,18 "Built target test_disk_lightglue_ort"
+.PHONY : CMakeFiles/test_disk_lightglue_ort.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_disk_lightglue_ort.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_disk_lightglue_ort.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_disk_lightglue_ort.dir/rule
+
+# Convenience name for target.
+test_disk_lightglue_ort: CMakeFiles/test_disk_lightglue_ort.dir/rule
+.PHONY : test_disk_lightglue_ort
+
+# clean rule for target.
+CMakeFiles/test_disk_lightglue_ort.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_ort.dir/build.make CMakeFiles/test_disk_lightglue_ort.dir/clean
+.PHONY : CMakeFiles/test_disk_lightglue_ort.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/test_lightglue.dir
 
 # All Build rule for target.
 CMakeFiles/test_lightglue.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lightglue.dir/build.make CMakeFiles/test_lightglue.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lightglue.dir/build.make CMakeFiles/test_lightglue.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles --progress-num=9,10 "Built target test_lightglue"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles --progress-num=19,20 "Built target test_lightglue"
 .PHONY : CMakeFiles/test_lightglue.dir/all
 
 # Build rule for subdir invocation for target.
@@ -221,7 +361,7 @@ CMakeFiles/test_lightglue.dir/clean:
 CMakeFiles/test_xfeat.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_xfeat.dir/build.make CMakeFiles/test_xfeat.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_xfeat.dir/build.make CMakeFiles/test_xfeat.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles --progress-num=11,12 "Built target test_xfeat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles --progress-num=21,22 "Built target test_xfeat"
 .PHONY : CMakeFiles/test_xfeat.dir/all
 
 # Build rule for subdir invocation for target.

@@ -52,8 +52,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/example_for_featur_extractor_matcher.dir/DependInfo.cmake"
   "CMakeFiles/feature_extraction_example.dir/DependInfo.cmake"
+  "CMakeFiles/in_memory_loading_demo.dir/DependInfo.cmake"
   "CMakeFiles/superpoint_lightglue_only_demo.dir/DependInfo.cmake"
   "CMakeFiles/test_aliked.dir/DependInfo.cmake"
+  "CMakeFiles/test_disk_extractor_new.dir/DependInfo.cmake"
+  "CMakeFiles/test_disk_extractor_ort.dir/DependInfo.cmake"
+  "CMakeFiles/test_disk_lightglue_new.dir/DependInfo.cmake"
+  "CMakeFiles/test_disk_lightglue_ort.dir/DependInfo.cmake"
   "CMakeFiles/test_lightglue.dir/DependInfo.cmake"
   "CMakeFiles/test_xfeat.dir/DependInfo.cmake"
   )

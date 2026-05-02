@@ -143,6 +143,19 @@ feature_extraction_example/fast:
 .PHONY : feature_extraction_example/fast
 
 #=============================================================================
+# Target rules for targets named in_memory_loading_demo
+
+# Build rule for target.
+in_memory_loading_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 in_memory_loading_demo
+.PHONY : in_memory_loading_demo
+
+# fast build rule for target.
+in_memory_loading_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/in_memory_loading_demo.dir/build.make CMakeFiles/in_memory_loading_demo.dir/build
+.PHONY : in_memory_loading_demo/fast
+
+#=============================================================================
 # Target rules for targets named superpoint_lightglue_only_demo
 
 # Build rule for target.
@@ -167,6 +180,58 @@ test_aliked: cmake_check_build_system
 test_aliked/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/build
 .PHONY : test_aliked/fast
+
+#=============================================================================
+# Target rules for targets named test_disk_extractor_new
+
+# Build rule for target.
+test_disk_extractor_new: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_disk_extractor_new
+.PHONY : test_disk_extractor_new
+
+# fast build rule for target.
+test_disk_extractor_new/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_new.dir/build.make CMakeFiles/test_disk_extractor_new.dir/build
+.PHONY : test_disk_extractor_new/fast
+
+#=============================================================================
+# Target rules for targets named test_disk_extractor_ort
+
+# Build rule for target.
+test_disk_extractor_ort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_disk_extractor_ort
+.PHONY : test_disk_extractor_ort
+
+# fast build rule for target.
+test_disk_extractor_ort/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_ort.dir/build.make CMakeFiles/test_disk_extractor_ort.dir/build
+.PHONY : test_disk_extractor_ort/fast
+
+#=============================================================================
+# Target rules for targets named test_disk_lightglue_new
+
+# Build rule for target.
+test_disk_lightglue_new: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_disk_lightglue_new
+.PHONY : test_disk_lightglue_new
+
+# fast build rule for target.
+test_disk_lightglue_new/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_new.dir/build.make CMakeFiles/test_disk_lightglue_new.dir/build
+.PHONY : test_disk_lightglue_new/fast
+
+#=============================================================================
+# Target rules for targets named test_disk_lightglue_ort
+
+# Build rule for target.
+test_disk_lightglue_ort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_disk_lightglue_ort
+.PHONY : test_disk_lightglue_ort
+
+# fast build rule for target.
+test_disk_lightglue_ort/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_ort.dir/build.make CMakeFiles/test_disk_lightglue_ort.dir/build
+.PHONY : test_disk_lightglue_ort/fast
 
 #=============================================================================
 # Target rules for targets named test_lightglue
@@ -242,6 +307,30 @@ feature_extraction_example.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/feature_extraction_example.dir/build.make CMakeFiles/feature_extraction_example.dir/feature_extraction_example.cpp.s
 .PHONY : feature_extraction_example.cpp.s
 
+in_memory_loading_demo.o: in_memory_loading_demo.cpp.o
+.PHONY : in_memory_loading_demo.o
+
+# target to build an object file
+in_memory_loading_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/in_memory_loading_demo.dir/build.make CMakeFiles/in_memory_loading_demo.dir/in_memory_loading_demo.cpp.o
+.PHONY : in_memory_loading_demo.cpp.o
+
+in_memory_loading_demo.i: in_memory_loading_demo.cpp.i
+.PHONY : in_memory_loading_demo.i
+
+# target to preprocess a source file
+in_memory_loading_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/in_memory_loading_demo.dir/build.make CMakeFiles/in_memory_loading_demo.dir/in_memory_loading_demo.cpp.i
+.PHONY : in_memory_loading_demo.cpp.i
+
+in_memory_loading_demo.s: in_memory_loading_demo.cpp.s
+.PHONY : in_memory_loading_demo.s
+
+# target to generate assembly for a file
+in_memory_loading_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/in_memory_loading_demo.dir/build.make CMakeFiles/in_memory_loading_demo.dir/in_memory_loading_demo.cpp.s
+.PHONY : in_memory_loading_demo.cpp.s
+
 superpoint_lightglue_only_demo.o: superpoint_lightglue_only_demo.cpp.o
 .PHONY : superpoint_lightglue_only_demo.o
 
@@ -289,6 +378,102 @@ test_aliked.s: test_aliked.cpp.s
 test_aliked.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/test_aliked.cpp.s
 .PHONY : test_aliked.cpp.s
+
+test_disk_extractor_new.o: test_disk_extractor_new.cpp.o
+.PHONY : test_disk_extractor_new.o
+
+# target to build an object file
+test_disk_extractor_new.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_new.dir/build.make CMakeFiles/test_disk_extractor_new.dir/test_disk_extractor_new.cpp.o
+.PHONY : test_disk_extractor_new.cpp.o
+
+test_disk_extractor_new.i: test_disk_extractor_new.cpp.i
+.PHONY : test_disk_extractor_new.i
+
+# target to preprocess a source file
+test_disk_extractor_new.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_new.dir/build.make CMakeFiles/test_disk_extractor_new.dir/test_disk_extractor_new.cpp.i
+.PHONY : test_disk_extractor_new.cpp.i
+
+test_disk_extractor_new.s: test_disk_extractor_new.cpp.s
+.PHONY : test_disk_extractor_new.s
+
+# target to generate assembly for a file
+test_disk_extractor_new.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_new.dir/build.make CMakeFiles/test_disk_extractor_new.dir/test_disk_extractor_new.cpp.s
+.PHONY : test_disk_extractor_new.cpp.s
+
+test_disk_extractor_ort.o: test_disk_extractor_ort.cpp.o
+.PHONY : test_disk_extractor_ort.o
+
+# target to build an object file
+test_disk_extractor_ort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_ort.dir/build.make CMakeFiles/test_disk_extractor_ort.dir/test_disk_extractor_ort.cpp.o
+.PHONY : test_disk_extractor_ort.cpp.o
+
+test_disk_extractor_ort.i: test_disk_extractor_ort.cpp.i
+.PHONY : test_disk_extractor_ort.i
+
+# target to preprocess a source file
+test_disk_extractor_ort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_ort.dir/build.make CMakeFiles/test_disk_extractor_ort.dir/test_disk_extractor_ort.cpp.i
+.PHONY : test_disk_extractor_ort.cpp.i
+
+test_disk_extractor_ort.s: test_disk_extractor_ort.cpp.s
+.PHONY : test_disk_extractor_ort.s
+
+# target to generate assembly for a file
+test_disk_extractor_ort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_extractor_ort.dir/build.make CMakeFiles/test_disk_extractor_ort.dir/test_disk_extractor_ort.cpp.s
+.PHONY : test_disk_extractor_ort.cpp.s
+
+test_disk_lightglue_new.o: test_disk_lightglue_new.cpp.o
+.PHONY : test_disk_lightglue_new.o
+
+# target to build an object file
+test_disk_lightglue_new.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_new.dir/build.make CMakeFiles/test_disk_lightglue_new.dir/test_disk_lightglue_new.cpp.o
+.PHONY : test_disk_lightglue_new.cpp.o
+
+test_disk_lightglue_new.i: test_disk_lightglue_new.cpp.i
+.PHONY : test_disk_lightglue_new.i
+
+# target to preprocess a source file
+test_disk_lightglue_new.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_new.dir/build.make CMakeFiles/test_disk_lightglue_new.dir/test_disk_lightglue_new.cpp.i
+.PHONY : test_disk_lightglue_new.cpp.i
+
+test_disk_lightglue_new.s: test_disk_lightglue_new.cpp.s
+.PHONY : test_disk_lightglue_new.s
+
+# target to generate assembly for a file
+test_disk_lightglue_new.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_new.dir/build.make CMakeFiles/test_disk_lightglue_new.dir/test_disk_lightglue_new.cpp.s
+.PHONY : test_disk_lightglue_new.cpp.s
+
+test_disk_lightglue_ort.o: test_disk_lightglue_ort.cpp.o
+.PHONY : test_disk_lightglue_ort.o
+
+# target to build an object file
+test_disk_lightglue_ort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_ort.dir/build.make CMakeFiles/test_disk_lightglue_ort.dir/test_disk_lightglue_ort.cpp.o
+.PHONY : test_disk_lightglue_ort.cpp.o
+
+test_disk_lightglue_ort.i: test_disk_lightglue_ort.cpp.i
+.PHONY : test_disk_lightglue_ort.i
+
+# target to preprocess a source file
+test_disk_lightglue_ort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_ort.dir/build.make CMakeFiles/test_disk_lightglue_ort.dir/test_disk_lightglue_ort.cpp.i
+.PHONY : test_disk_lightglue_ort.cpp.i
+
+test_disk_lightglue_ort.s: test_disk_lightglue_ort.cpp.s
+.PHONY : test_disk_lightglue_ort.s
+
+# target to generate assembly for a file
+test_disk_lightglue_ort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_disk_lightglue_ort.dir/build.make CMakeFiles/test_disk_lightglue_ort.dir/test_disk_lightglue_ort.cpp.s
+.PHONY : test_disk_lightglue_ort.cpp.s
 
 test_lightglue.o: test_lightglue.cpp.o
 .PHONY : test_lightglue.o
@@ -348,8 +533,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... example_for_featur_extractor_matcher"
 	@echo "... feature_extraction_example"
+	@echo "... in_memory_loading_demo"
 	@echo "... superpoint_lightglue_only_demo"
 	@echo "... test_aliked"
+	@echo "... test_disk_extractor_new"
+	@echo "... test_disk_extractor_ort"
+	@echo "... test_disk_lightglue_new"
+	@echo "... test_disk_lightglue_ort"
 	@echo "... test_lightglue"
 	@echo "... test_xfeat"
 	@echo "... example_for_featur_extractor_matcher.o"
@@ -358,12 +548,27 @@ help:
 	@echo "... feature_extraction_example.o"
 	@echo "... feature_extraction_example.i"
 	@echo "... feature_extraction_example.s"
+	@echo "... in_memory_loading_demo.o"
+	@echo "... in_memory_loading_demo.i"
+	@echo "... in_memory_loading_demo.s"
 	@echo "... superpoint_lightglue_only_demo.o"
 	@echo "... superpoint_lightglue_only_demo.i"
 	@echo "... superpoint_lightglue_only_demo.s"
 	@echo "... test_aliked.o"
 	@echo "... test_aliked.i"
 	@echo "... test_aliked.s"
+	@echo "... test_disk_extractor_new.o"
+	@echo "... test_disk_extractor_new.i"
+	@echo "... test_disk_extractor_new.s"
+	@echo "... test_disk_extractor_ort.o"
+	@echo "... test_disk_extractor_ort.i"
+	@echo "... test_disk_extractor_ort.s"
+	@echo "... test_disk_lightglue_new.o"
+	@echo "... test_disk_lightglue_new.i"
+	@echo "... test_disk_lightglue_new.s"
+	@echo "... test_disk_lightglue_ort.o"
+	@echo "... test_disk_lightglue_ort.i"
+	@echo "... test_disk_lightglue_ort.s"
 	@echo "... test_lightglue.o"
 	@echo "... test_lightglue.i"
 	@echo "... test_lightglue.s"

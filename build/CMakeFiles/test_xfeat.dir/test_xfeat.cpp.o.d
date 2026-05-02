@@ -282,8 +282,6 @@ CMakeFiles/test_xfeat.dir/test_xfeat.cpp.o: \
  /usr/local/include/opencv5/opencv2/flann/miniflann.hpp \
  /usr/local/include/opencv5/opencv2/flann/defines.h \
  /usr/local/include/opencv5/opencv2/flann/config.h \
- /usr/local/include/opencv5/opencv2/features/feature_extractor.hpp \
- /usr/local/include/opencv5/opencv2/features/feature_matcher.hpp \
  /usr/local/include/opencv5/opencv2/dnn.hpp \
  /usr/local/include/opencv5/opencv2/dnn/dnn.hpp \
  /usr/local/include/opencv5/opencv2/core/async.hpp \
