@@ -21,6 +21,26 @@ static const char *engine_to_string(int engine)
     return "UNKNOWN_ENGINE";
 }
 
+
+static void print_runtime_info()
+{
+    cout << "================ Runtime Info ================" << endl;
+    cout << "OpenCV version string: " << CV_VERSION << endl;
+    cout << "OpenCV major/minor/revision: "
+         << CV_VERSION_MAJOR << "."
+         << CV_VERSION_MINOR << "."
+         << CV_VERSION_REVISION << endl;
+    cout << "OpenCV detailed build information:" << endl;
+    cout << cv::getBuildInformation() << endl;
+    cout << "DNN inference engine: " << engine_to_string(ENGINE)
+         << " (enum=" << static_cast<int>(ENGINE) << ")" << endl;
+    const char *traceEnv = std::getenv("DNN_TRACE_ALL");
+    cout << "DNN_TRACE_ALL=" << (traceEnv ? traceEnv : "<unset>") << endl;
+    cout << "==============================================" << endl;
+}
+
+
+
 void test_aliked()
 {
     cout << "OpenCV version " << CV_VERSION << endl;
@@ -131,6 +151,7 @@ void test_aliked()
 
 int main()
 {
+    print_runtime_info();
     test_aliked();
     return 0;
 }

@@ -55,6 +55,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/in_memory_loading_demo.dir/DependInfo.cmake"
   "CMakeFiles/superpoint_lightglue_only_demo.dir/DependInfo.cmake"
   "CMakeFiles/test_aliked.dir/DependInfo.cmake"
+  "CMakeFiles/test_aliked_lightglue_new.dir/DependInfo.cmake"
+  "CMakeFiles/test_aliked_lightglue_ort.dir/DependInfo.cmake"
   "CMakeFiles/test_disk_extractor_new.dir/DependInfo.cmake"
   "CMakeFiles/test_disk_extractor_ort.dir/DependInfo.cmake"
   "CMakeFiles/test_disk_lightglue_new.dir/DependInfo.cmake"

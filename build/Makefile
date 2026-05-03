@@ -182,6 +182,32 @@ test_aliked/fast:
 .PHONY : test_aliked/fast
 
 #=============================================================================
+# Target rules for targets named test_aliked_lightglue_new
+
+# Build rule for target.
+test_aliked_lightglue_new: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_aliked_lightglue_new
+.PHONY : test_aliked_lightglue_new
+
+# fast build rule for target.
+test_aliked_lightglue_new/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked_lightglue_new.dir/build.make CMakeFiles/test_aliked_lightglue_new.dir/build
+.PHONY : test_aliked_lightglue_new/fast
+
+#=============================================================================
+# Target rules for targets named test_aliked_lightglue_ort
+
+# Build rule for target.
+test_aliked_lightglue_ort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_aliked_lightglue_ort
+.PHONY : test_aliked_lightglue_ort
+
+# fast build rule for target.
+test_aliked_lightglue_ort/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked_lightglue_ort.dir/build.make CMakeFiles/test_aliked_lightglue_ort.dir/build
+.PHONY : test_aliked_lightglue_ort/fast
+
+#=============================================================================
 # Target rules for targets named test_disk_extractor_new
 
 # Build rule for target.
@@ -379,6 +405,54 @@ test_aliked.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked.dir/build.make CMakeFiles/test_aliked.dir/test_aliked.cpp.s
 .PHONY : test_aliked.cpp.s
 
+test_aliked_lightglue_new.o: test_aliked_lightglue_new.cpp.o
+.PHONY : test_aliked_lightglue_new.o
+
+# target to build an object file
+test_aliked_lightglue_new.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked_lightglue_new.dir/build.make CMakeFiles/test_aliked_lightglue_new.dir/test_aliked_lightglue_new.cpp.o
+.PHONY : test_aliked_lightglue_new.cpp.o
+
+test_aliked_lightglue_new.i: test_aliked_lightglue_new.cpp.i
+.PHONY : test_aliked_lightglue_new.i
+
+# target to preprocess a source file
+test_aliked_lightglue_new.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked_lightglue_new.dir/build.make CMakeFiles/test_aliked_lightglue_new.dir/test_aliked_lightglue_new.cpp.i
+.PHONY : test_aliked_lightglue_new.cpp.i
+
+test_aliked_lightglue_new.s: test_aliked_lightglue_new.cpp.s
+.PHONY : test_aliked_lightglue_new.s
+
+# target to generate assembly for a file
+test_aliked_lightglue_new.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked_lightglue_new.dir/build.make CMakeFiles/test_aliked_lightglue_new.dir/test_aliked_lightglue_new.cpp.s
+.PHONY : test_aliked_lightglue_new.cpp.s
+
+test_aliked_lightglue_ort.o: test_aliked_lightglue_ort.cpp.o
+.PHONY : test_aliked_lightglue_ort.o
+
+# target to build an object file
+test_aliked_lightglue_ort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked_lightglue_ort.dir/build.make CMakeFiles/test_aliked_lightglue_ort.dir/test_aliked_lightglue_ort.cpp.o
+.PHONY : test_aliked_lightglue_ort.cpp.o
+
+test_aliked_lightglue_ort.i: test_aliked_lightglue_ort.cpp.i
+.PHONY : test_aliked_lightglue_ort.i
+
+# target to preprocess a source file
+test_aliked_lightglue_ort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked_lightglue_ort.dir/build.make CMakeFiles/test_aliked_lightglue_ort.dir/test_aliked_lightglue_ort.cpp.i
+.PHONY : test_aliked_lightglue_ort.cpp.i
+
+test_aliked_lightglue_ort.s: test_aliked_lightglue_ort.cpp.s
+.PHONY : test_aliked_lightglue_ort.s
+
+# target to generate assembly for a file
+test_aliked_lightglue_ort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_aliked_lightglue_ort.dir/build.make CMakeFiles/test_aliked_lightglue_ort.dir/test_aliked_lightglue_ort.cpp.s
+.PHONY : test_aliked_lightglue_ort.cpp.s
+
 test_disk_extractor_new.o: test_disk_extractor_new.cpp.o
 .PHONY : test_disk_extractor_new.o
 
@@ -536,6 +610,8 @@ help:
 	@echo "... in_memory_loading_demo"
 	@echo "... superpoint_lightglue_only_demo"
 	@echo "... test_aliked"
+	@echo "... test_aliked_lightglue_new"
+	@echo "... test_aliked_lightglue_ort"
 	@echo "... test_disk_extractor_new"
 	@echo "... test_disk_extractor_ort"
 	@echo "... test_disk_lightglue_new"
@@ -557,6 +633,12 @@ help:
 	@echo "... test_aliked.o"
 	@echo "... test_aliked.i"
 	@echo "... test_aliked.s"
+	@echo "... test_aliked_lightglue_new.o"
+	@echo "... test_aliked_lightglue_new.i"
+	@echo "... test_aliked_lightglue_new.s"
+	@echo "... test_aliked_lightglue_ort.o"
+	@echo "... test_aliked_lightglue_ort.i"
+	@echo "... test_aliked_lightglue_ort.s"
 	@echo "... test_disk_extractor_new.o"
 	@echo "... test_disk_extractor_new.i"
 	@echo "... test_disk_extractor_new.s"

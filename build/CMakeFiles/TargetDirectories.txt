@@ -3,6 +3,8 @@
 /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles/in_memory_loading_demo.dir
 /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles/superpoint_lightglue_only_demo.dir
 /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles/test_aliked.dir
+/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles/test_aliked_lightglue_new.dir
+/home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles/test_aliked_lightglue_ort.dir
 /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles/test_disk_extractor_new.dir
 /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles/test_disk_extractor_ort.dir
 /home/christylinux/desktop/lightglue_opencv_project/build/CMakeFiles/test_disk_lightglue_new.dir
