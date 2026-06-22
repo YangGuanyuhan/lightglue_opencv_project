@@ -6,6 +6,7 @@
 
 #include <opencv2/opencv.hpp>
 #include <opencv2/features2d.hpp>
+#include <opencv2/geometry.hpp>
 #include <iostream>
 #include <vector>
 #include <string>

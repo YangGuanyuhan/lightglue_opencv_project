@@ -64,7 +64,6 @@ int main(int argc, char** argv)
     // dnn::Net net = dnn::readNet(alikedModel);
     // Ptr<ALIKED> aliked = ALIKED::create(net);
 
-    cout << "ALIKED model: " << aliked->getModel() << endl;
     cout << "Descriptor size: " << aliked->descriptorSize() << endl;  // 128
     cout << "Descriptor type: " << aliked->descriptorType() << endl;  // CV_32F
     cout << "Default norm: " << aliked->defaultNorm() << endl;        // NORM_L2
